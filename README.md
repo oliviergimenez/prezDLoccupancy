@@ -1,7 +1,7 @@
-## My first steps in deep learning: Species identification and camera traps
+## Deep learning, false negatives/positives and predator-prey interactions: Peregrinations in R.
 
-This repo contains the slides for a short talk I gave at the [imaginecology](https://imaginecology.sciencesconf.org/) workshop in November 2020.
+This repo contains the slides for a short talk I gave at the [ Journée Scientifique IA et Biodiversité](https://www.labex-cemeb.org/en/node/4374) on March 31, 2021.
 
-Check out the slides at [https://oliviergimenez.github.io/prezimaginecology/](https://oliviergimenez.github.io/prezimaginecology/). A video of the talk can be found on Youtube at [https://www.youtube.com/watch?v=CAbm9S39y5M](https://www.youtube.com/watch?v=CAbm9S39y5M), beware the French accent :frog: :stuck_out_tongue_winking_eye:
+Check out the slides at [https://oliviergimenez.github.io/prezimaginecology/](https://oliviergimenez.github.io/prezimaginecology/).
 
 Slides created with [remark.js](http://remarkjs.com/) and the R package [**xaringan**](https://github.com/yihui/xaringan).
