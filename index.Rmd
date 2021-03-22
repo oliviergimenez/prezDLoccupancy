@@ -321,7 +321,7 @@ background-color: white
 
 ```{r echo=FALSE, message=FALSE, warning=FALSE}
 options(knitr.kable.NA = '')
-readr::read_csv2(here::here("prez/dat","perf_fastai.csv")) %>% 
+readr::read_csv2(here::here("dat","perf_fastai.csv")) %>% 
   janitor::clean_names() %>%
   kbl() %>%
   kable_paper() %>%
@@ -329,7 +329,7 @@ readr::read_csv2(here::here("prez/dat","perf_fastai.csv")) %>%
   row_spec(13, bold = T, color = "white", background = "white") %>%
   row_spec(14:16, bold = T) %>%
   column_spec(1, bold = TRUE) %>%
-  save_kable(here::here("prez/img", "perf1.png"),
+  save_kable(here::here("img", "perf1.png"),
              zoom = 5)
 ```
 
@@ -357,7 +357,7 @@ background-color: white
 
 ```{r echo=FALSE, message=FALSE, warning=FALSE}
 options(knitr.kable.NA = '')
-readr::read_csv2(here::here("prez/dat","perf_fastai.csv")) %>% 
+readr::read_csv2(here::here("dat","perf_fastai.csv")) %>% 
   janitor::clean_names() %>%
   kbl() %>%
   kable_paper() %>%
@@ -366,7 +366,7 @@ readr::read_csv2(here::here("prez/dat","perf_fastai.csv")) %>%
   row_spec(13, bold = T, color = "white", background = "white") %>%
   row_spec(14:16, bold = T) %>%
   column_spec(1, bold = TRUE) %>%
-  save_kable(here::here("prez/img", "perf2.png"),
+  save_kable(here::here("img", "perf2.png"),
              zoom = 5)
 ```
 
@@ -390,7 +390,7 @@ background-color: white
 
 ```{r echo=FALSE, message=FALSE, warning=FALSE}
 options(knitr.kable.NA = '')
-readr::read_csv2(here::here("prez/dat","perf_fastai.csv")) %>% 
+readr::read_csv2(here::here("dat","perf_fastai.csv")) %>% 
   janitor::clean_names() %>%
   kbl() %>%
   kable_paper() %>%
@@ -399,7 +399,7 @@ readr::read_csv2(here::here("prez/dat","perf_fastai.csv")) %>%
   row_spec(13, bold = T, color = "white", background = "white") %>%
   row_spec(14:16, bold = T) %>%
   column_spec(1, bold = TRUE) %>%
-  save_kable(here::here("prez/img", "perf.png"),
+  save_kable(here::here("img", "perf.png"),
              zoom = 5)
 ```
 
@@ -438,7 +438,7 @@ background-image: url(img/blackboard.jpg)
 background-size: cover 
 
 ```{r echo = FALSE, message = FALSE, warning = FALSE}
-load(here::here("prez/dat/", "pixAinannot.RData"))
+load(here::here("dat/", "pixAinannot.RData"))
 library(highcharter)
 dout <- unclass(table(tt_final$observed,tt_final$predicted))
 perf_prediction <- hchart(dout, label = TRUE) %>%

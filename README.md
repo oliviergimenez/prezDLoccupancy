@@ -1,6 +1,6 @@
 ## Deep learning, false negatives/positives and predator-prey interactions: Peregrinations in R.
 
-This repo contains the slides for a short talk I gave at the [ Journée Scientifique IA et Biodiversité](https://www.labex-cemeb.org/en/node/4374) on March 31, 2021.
+This repo contains the slides for a short talk I gave at the [Journée Scientifique IA et Biodiversité](https://www.labex-cemeb.org/en/node/4374) on March 31, 2021.
 
 Check out the slides at [https://oliviergimenez.github.io/prezimaginecology/](https://oliviergimenez.github.io/prezimaginecology/).
 
