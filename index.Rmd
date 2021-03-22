@@ -164,7 +164,7 @@ Mentionner que c'est le boulot du GdR EcoStat. ON a fait des journées déjà. J
 ---
 class: center, top
 background-image: url(img/imagine_conf.png)
-background-size: contain 
+background-size: cover
 
 <br><br><br>
 
@@ -495,6 +495,8 @@ load(unmarked)
 ---
 background-color: white
 
+<br><br>
+
 ```{r echo = FALSE}
 knitr::include_graphics("img/species_data.png")
 ```
@@ -824,6 +826,17 @@ Ce que je compte faire maintenant, sur le conseil de Vincent, c'est utiliser les
 
 
 ---
+background-color: white
+
+### [Regards de la SFEE](https://www.sfecologie.org/regard/r95-fev-2021-miele-dray-gimenez-deep-learning/)
+```{r echo = FALSE, out.width="95%"}
+knitr::include_graphics("img/sfee.png")
+```
+
+
+
+
+---
 class: center, bottom
 background-image: url(img/predictions.jpg)
 background-size: cover 
@@ -836,15 +849,5 @@ Thank you!
 ???
 
 Merci pour votre écoute. 
-
-
----
-background-color: white
-
-### [Regards de la SFEE](https://www.sfecologie.org/regard/r95-fev-2021-miele-dray-gimenez-deep-learning/)
-```{r echo = FALSE, out.width="95%"}
-knitr::include_graphics("img/sfee.png")
-```
-
 
 
