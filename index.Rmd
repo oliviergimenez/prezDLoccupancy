@@ -36,9 +36,9 @@ style_duo(primary_color = "#1F4257", secondary_color = "#F97B64")
 
 ???
 
-+ Bonjour. Mon nom est Olivier Gimenez. Je suis chercheur CNRS au Centre d'Ecologie Fonctionnelle et Evolutive Montpellier. 
++ Bonjour. Mon nom est Olivier Gimenez. Je suis chercheur CNRS au Centre d'Ecologie Fonctionnelle et Evolutive à Montpellier. 
 
-+ Je vais vous parler de mes premiers pas dans le deep learning avec le logiciel R, et son application à la reconnaissance d'espèces sur des photos prises grâce à des pièges photographiques. 
++ Je vais vous parler de mes premiers pas dans le deep learning avec le logiciel R, et l'étude des interactions entre espèces à partir de pièges photos. 
 
 
 ---
@@ -56,7 +56,7 @@ background-size: cover
 
 + Je travaille beaucoup sur les relations prédateur-proies, des interactions entre espèces qui façonnent les communautés de grands mammifères. 
 
-+ La ppale question que l'on se pose est de comprendre comment l'environnement et les relations entre prédateurs et proies s'articulent. 
++ La question que l'on se pose est de comprendre comment l'environnement et les relations entre prédateurs et proies s'articulent. 
 
 
 ---
@@ -74,28 +74,28 @@ background-size: cover
 
 ???
 
-+ Il s'agit d'un travail en collaboration avec Anna Chaine, Maëlis Kervellec, toutes deux stagiaires de Master, Vincent Miele, les collègues de l'Office Français de la Biodiversité et des fédérations de chasse de l'Ain et du Jura.  
++ Il s'agit d'un travail en collaboration avec Anna Chaine et Maëlis Kervellec, toutes deux stagiaires de Master, Vincent Miele, les collègues de l'Office Français de la Biodiversité et des fédérations de chasse de l'Ain et du Jura.  
 
-+ J'en profite pour remercier les collègues de la PF MBB qui ont été d'une aide précieuse pour l'utilisation des machines GPU.
++ J'en profite pour remercier les collègues de la plateforme Montpellier Bioinformatique Biodiversité qui ont été d'une aide précieuse dans l'utilisation des machines GPU.
 
----
-class: left, middle
-background-image: url(img/cameratraps.jpg)
-background-size: cover 
+<!-- --- -->
+<!-- class: left, middle -->
+<!-- background-image: url(img/cameratraps.jpg) -->
+<!-- background-size: cover  -->
 
-<br><br><br>
+<!-- <br><br><br> -->
 
-## Camera traps
+<!-- ## Camera traps -->
 
-.footnote[
-`r icon::fa("camera")` [Tiard Schulz](https://tiard-schulz-fotografie.jimdosite.com/)]
+<!-- .footnote[ -->
+<!-- `r icon::fa("camera")` [Tiard Schulz](https://tiard-schulz-fotografie.jimdosite.com/)] -->
 
 
-???
+<!-- ??? -->
 
-+ Les collègues de l'OFB et des fédérations de chasse collectent des données dans l'habitat naturel des espèces qui nous intéressent, grâce à des pièges photos laissés à des endroits stratégiques. 
+<!-- + Les collègues de l'OFB et des fédérations de chasse collectent des données dans l'habitat naturel des espèces qui nous intéressent, grâce à des pièges photos laissés à des endroits stratégiques.  -->
 
-+ Alors pas avec du matériel comme celui-ci qui disparaitrait bien vite. 
+<!-- + Alors pas avec du matériel comme celui-ci qui disparaitrait bien vite.  -->
 
 ---
 class: left, top
@@ -104,9 +104,9 @@ background-size: cover
 
 ???
 
-+ Mais plutôt ce genre de piège photo. 
++ Les collègues de l'OFB et des fédérations de chasse collectent des données dans l'habitat naturel des espèces qui nous intéressent, grâce à des pièges photos laissés à des endroits stratégiques. 
 
-+ Avec un système où l'on installe un appareil de chaque côté de chemins où les prédateurs sont susceptibles de passer, comme ici une femelle et ses petits.  
++ Précisément de chaque côté de chemins où les prédateurs sont susceptibles de passer, comme ici une femelle et ses petits.  
 
 --
 
@@ -144,7 +144,7 @@ Source: [Andrew Ng](https://en.wikipedia.org/wiki/Andrew_Ng)]
 
 ???
 
-+ L'idée est de nourrir les algorithmes avec des photos et en sortie de récupérer l'espèce qui se trouve sur la photo. 
++ L'idée est de nourrir les algorithmes avec des photos pour en sortie récupérer l'espèce qui se trouve sur la photo. 
 
 
 ---
@@ -160,28 +160,13 @@ background-size: contain
 
 ???
 
-+ Pour faire mes premiers pas en DL, j'ai utilisé imaginecology proposé par le GDR Ecologie Statistique. 
++ Pour faire mes premiers pas en DL, j'ai utilisé imaginecology que l'on propose avec le GDR Ecologie Statistique. 
 
-+ Sérieusement, jetez-y un coup d'oeil. C'est bourré de ressources précieuses et pertinentes. Il y une intro au DL, des codes, des papiers, des données pour entrainer vos modèles. Et surtout tout un tas de tutoriels pour vous former. 
++ Jetez-y un coup d'oeil. C'est bourré de ressources précieuses et pertinentes. Il y une intro au DL en vidéo, et tout un tas de tutoriels pour vous former. 
 
-+ Bravo à Vincent et Gaspard pour ce boulot! 
+<!-- + Il y a aussi un lien vers les rencontres que nous avons organisées en novembre autour de l'utilisation des méthodes d'apprentissage profond pour l'analyse d'images et de sons en écologie -->
 
-
----
-class: center, top
-background-image: url(img/imagine_conf.png)
-background-size: cover
-
-<br><br><br>
-
-### <https://imaginecology.sciencesconf.org/>
-
-
-???
-
-+ Toujours avec le GDR EcoStat, nous avons organisé en novembre des rencontres autour de l'utilisation des méthodes d'apprentissage profond pour l'analyse d'images et de sons en écologie.
-
-+ A cette occasion, Vincent Miele a donné un exposé introductif filmé dans lequel il explique les concepts généraux, les réseaux de neurones et le vocabulaire technique. 
+<!-- + Bravo à Vincent et Gaspard pour ce boulot!  -->
 
 
 ---
@@ -202,7 +187,9 @@ I used the [Python/PyTorch fastai deep learning library](https://github.com/fast
 
 ???
 
-+ Pour mes analyses, j'ai utilisé la librairie fastai qui repose sur le langage Python et sa librairie Pytorch. Fastai simplifie l'entrainement des réseaux de neurones avec l'utilisation des méthodes les plus récentes. 
++ Pour mes analyses, j'ai utilisé la librairie fast-ai qui repose sur le langage Python et sa librairie Pytorch. 
+
+<!-- Fastai simplifie l'entrainement des réseaux de neurones avec l'utilisation des méthodes les plus récentes.  -->
 
 <!-- + fastai is a deep learning library which provides practitioners with high-level components that can quickly and easily provide state-of-the-art results in standard deep learning domains, and provides researchers with low-level components that can be mixed and matched to build new approaches. It aims to do both things without substantial compromises in ease of use, flexibility, or performance.  -->
 
@@ -218,7 +205,7 @@ knitr::include_graphics("img/fastai.png")
 
 ???
 
-+ Le gros avantage de fastai est qu'elle vient aussi avec un package R qui propose tout un tas de fonctions pour l'utiliser. 
++ Le gros avantage de cette librairie est qu'elle vient avec un package R qui propose tout un tas de fonctions pour l'utiliser. 
 
 <!-- --- -->
 <!-- class: left, top -->
@@ -263,7 +250,7 @@ library(fastai)
 
 + Pour ce faire, il suffit de quelques lignes de code R. 
 
-+ On charge le package fastai d'abord. 
++ On charge le package fast-ai d'abord. 
 
 ---
 ## Some `R` code
@@ -314,7 +301,9 @@ one_cycle
 
 ???
 
-+ Puis on continue l'entrainement sur nos données. Ici j'ai utilisé 20 epochs et sauvegardé le modèle après chaque epoch pour une utilisation ultérieure. 
++ Puis on fait l'entrainement sur nos données. 
+
++ Ici j'ai utilisé 20 epochs et sauvegardé le modèle après chaque epoch pour une utilisation ultérieure. 
 
 ---
 class: center, middle
@@ -324,17 +313,17 @@ background-size: contain
 
 ???
 
-+ Les résultats sont plutôt bons. On arrive à détecter sur les images et classifier le lynx, et ses proies, le chamoix et le chevreuil, avec un degré de certitude élevé.
++ Les résultats sont plutôt bons. On arrive à classifier le lynx, et ses proies, le chamoix et le chevreuil, avec un degré de certitude satisfaisant.
 
----
-class: center, middle
-background-image: url(img/others.png)
-background-size: contain 
+<!-- --- -->
+<!-- class: center, middle -->
+<!-- background-image: url(img/others.png) -->
+<!-- background-size: contain  -->
 
 
-???
+<!-- ??? -->
 
-+ C'est le cas aussi pour d'autres espèces présentes sur les photos. 
+<!-- + C'est le cas aussi pour d'autres espèces présentes sur les photos.  -->
 
 
 ---
@@ -380,21 +369,21 @@ perf_prediction
 
 ???
 
-+ Les résultats peuvent être représentés sous la forme d'une matrice de confusion, avec les espèces qui se trouvent effectivement sur les photos en lignes, et les espèces qui sont prédites par l'algo en colonnes.  
++ Les résultats peuvent être représentés sous la forme d'une matrice de confusion, avec les espèces qui sont prédites par l'algo en colonnes, et les espèces qui se trouvent réellement sur les photos en lignes.  
 
-+ On se concentre sur le lynx et ses proies chevreuil et chamois et on dissèque les faux positifs et faux négatifs.  
++ On se concentre sur le lynx et on dissèque les faux positifs et faux négatifs.  
 
-+ Un faux négatif est par ex une photo sur laquelle on a un lynx mais on prédit autre chose. Un faux positif est une photo sur laquelle on n'a pas de lynx mais on prédit qu'il y en a un. 
++ Un faux négatif est par exemple une photo sur laquelle on a un lynx mais on prédit une autre espèce. Un faux positif est une photo sur laquelle on n'a pas de lynx mais on prédit qu'il y en a un. 
 
-+ On commence avec les faux négatifs, en ligne donc :
-    + le lynx est confondu avec chat et renard surtout ;
-    + chamois avec chevreuil parfois ;
-    + chevreuil avec chamois, chien et renard.
++ On commence avec les faux négatifs, en ligne donc, on voit que le lynx est confondu avec chat et renard surtout. 
+    <!-- + le lynx est confondu avec chat et renard surtout ; -->
+    <!-- + chamois avec chevreuil parfois ; -->
+    <!-- + chevreuil avec chamois, chien et renard. -->
 
-+ On continue avec les faux positifs, les colonnes donc :
-    + on prédit qu'il y a un lynx sur les photos alors que ce sont en fait des chevreuils, des vaches ou des renards sur les photos ; 
-    + on prédit qu'il y a un chamois alors qu'en fait on a surtout des chevreuils ;
-    + et pour les chevreuils, c'est en fait des cerfs, renards et vaches qu'il y a sur les photos.
++ On continue avec les faux positifs, les colonnes donc, et on voit qu'on prédit qu'il y a un lynx sur les photos alors que ce sont en fait des chevreuils, ou des renards sur les photos.
+    <!-- + on prédit qu'il y a un lynx sur les photos alors que ce sont en fait des chevreuils, des vaches ou des renards sur les photos ;  -->
+    <!-- + on prédit qu'il y a un chamois alors qu'en fait on a surtout des chevreuils ; -->
+    <!-- + et pour les chevreuils, c'est en fait des cerfs, renards et vaches qu'il y a sur les photos. -->
 
 
 ---
@@ -404,7 +393,7 @@ background-size: cover
 
 ???
 
-+ C'est pas jojo. Il y a un peu de frustration, il ne faut pas le cacher... Mais passée cette frustration, on s'est posés la question, est-ce bien grave par rapport à la question écologique des interactions prédateur-proie?
++ C'est pas très satisfaisant. Il y a un peu de frustration, il ne faut pas le cacher... Mais passée cette frustration, on s'est posé la question, est-ce bien grave par rapport à la question écologique des interactions prédateur-proie?
 
 
 ---
@@ -416,7 +405,7 @@ knitr::include_graphics("img/rota_cover.png")
 
 ???
 
-+ Pour voir si les biais sont grave, on a utilisé des modèles statistiques qui permettent d'inférer les co-occurrences entre espèces en tenant compte de la difficulté de les détecter sur le terrain, les modèles dits d'occupancy. 
++ Pour voir si les biais sont graves, on a utilisé des modèles statistiques qui permettent d'inférer les co-occurrences entre espèces en tenant compte de la difficulté de les détecter sur le terrain, les modèles dits d'occupancy. 
 
 ---
 
@@ -429,7 +418,7 @@ load(unmarked)
 
 ???
 
-+ Ces modèles sont relativement faciles à implémenter dans R avec le package unmarked. 
++ On peut implémenter ces modèles dans R avec le package unmarked. 
 
 ---
 background-color: white
@@ -451,8 +440,11 @@ Fit a model w/ interactions bw lynx, roe deer and chamois, w/ cats and fox too:
 ```{r eval = FALSE}
 # Marginal and interaction effects
 occFormulas <- c('~1','~1','~1','~1','~1','~1','~1','~0',...,'~0') 
+
 # Detection probabilities
 detFormulas <- c('~1','~1','~1','~1','~1')
+
+# Fit occupancy model
 fit <- occuMulti(detformulas = detFormulas,
                  stateformulas = occFormulas,
                  data = data,
@@ -462,37 +454,20 @@ fit
 
 ???
 
-+ A partir de ces données, il est relativement simple de construire des modèles pour tester nos hypothèses sur les interactions. 
++ A partir de ces données, on construit des modèles pour tester nos hypothèses sur les interactions. 
 
-+ Ici je ne regarde que les interactions possibles entre le lynx et ses proies chamois et chevreuil, tout en prenant également en compte la présence de chats et renards. 
++ Ici je ne regarde que les interactions possibles entre le lynx et ses proies chamois et chevreuil. 
 
 + On considère aussi une détection différente pour chaque espèce. 
 
 + Et on ajuste ce modèle par max de vrais. 
 
----
-class: inverse, center
-background-color: white
-### Marginal occupancy
-
-```{r echo = FALSE, out.width = "85%"}
-knitr::include_graphics("img/marginal_occ.png")
-```
-
-???
-
-+ On obtient les probabilités de présence de chaque espèce, lynx, chevreuil et chamois. 
-
-+ En rouge, c'est l'analyse sur les photos étiquetées à la main, sans faux positifs ou négatifs donc. 
-
-+ En gris-bleu, le même modèle ajusté aux photos étiquetées par notre réseau de neurones convolutif. 
-
-+ Il y a clairement des biais dans l'estimation des probabilités de présence quand on se fie à l'étiquetage automatique des photos, mais étant donné que les différences ne sont pas énormes, l'écologue pourrait décider de les ignorer au regard du temps gagné par rapport à un étiquetage à la main.
 
 ---
 class: inverse, center
 background-color: white
-### Conditional occupancy
+
+### Conditional occupancy probabilities
 
 ```{r echo = FALSE}
 knitr::include_graphics("img/conditional_occ.png")
@@ -500,9 +475,17 @@ knitr::include_graphics("img/conditional_occ.png")
 
 ???
 
-+ Maintenant quand on passe aux probabilités de présence du prédateur, conditionnellement à la présence ou absence de ses proies, c'est une autre histoire. 
++ On obtient les probabilités de présence du lynx, conditionnellement à la présence ou absence de ses proies, chevreuil et chamois. 
 
-+ Par exemple, la prob de présence du lynx sachant la présence du chevreuil et l'absence du chamois est clairement sous-estimée.
++ En rouge, c'est l'analyse sur les photos étiquetées à la main, sans faux positifs ni faux négatifs donc. 
+
++ En gris-bleu, le même modèle ajusté aux photos étiquetées par notre réseau de neurones convolutif. 
+
++ Il y a un petit biais dans l'estimation de la probabilité de présence du lynx sachant la présence de ses deux proies favorites quand on se fie à l'étiquetage automatique des photos. 
+
++ Etant donné que les différences ne sont pas énormes, l'écologue pourra décider de les ignorer au regard du temps gagné par rapport à un étiquetage à la main.
+
++ Maintenant on a un plus gros problème avec la prob de présence du lynx sachant la présence du chevreuil et l'absence du chamois qui elle est clairement sous-estimée.
 
 ---
 class: left, top
@@ -520,7 +503,7 @@ background-size: cover
 
 ???
 
-+ On vérifie ici que l'utilisation d'un modèle entrainé sur un site, ici le Jura, est délicate quand il s'agit de prédire sur un autre site, ici l'Ain. C'est un résultat connu. 
++ On a vu que l'utilisation d'un modèle entrainé sur un site pour prédire sur un autre site est délicate. C'est un résultat connu. 
 
 --
 + Lack of diversity in training dataset? More pix to come.
@@ -534,14 +517,14 @@ background-size: cover
 
 ???
 
-+ Il est facile de se perdre dans les dédales du deep learning, mais il faut garder le cap de la question écologique, et on peut peut-être accepter des performances moyennes si on peut vivre avec le biais engendré sur les estimations des indicateurs écologiques que l'on souhaite utiliser. 
++ Il est facile de se perdre dans les dédales du deep learning, mais il faut garder le cap de la question écologique, et on peut peut-être accepter des performances moyennes des algorithmes si on peut vivre avec le biais engendré sur les indicateurs écologiques que l'on souhaite utiliser. 
 
 --
 + Ongoing work: Account for both false negatives and false positives. 
 
 ???
 
-+ On peut toutefois sûrement faire mieux, et j'explore actuellement le développement de modèles de distribution d'espèce qui prendrait à la fois en compte les interactions et les faux positifs et faux négatifs. 
++ Malgré tout, on peut sûrement faire mieux, et j'explore actuellement le développement de modèles de distribution d'espèce qui prendrait à la fois en compte les interactions et les faux positifs et faux négatifs. 
 
 
 <!-- --- -->
@@ -831,7 +814,23 @@ Thank you!
 Merci pour votre écoute. 
 
 
+---
+class: center middle
 
+# Bonus slides
+
+
+---
+
+### training dataset
+
+![](img/jura_train.png)
+
+---
+
+### validation dataset
+
+![](img/jura_valid.png)
 
 ---
 class: center, middle
@@ -929,3 +928,44 @@ readr::read_csv2(here::here("dat","perf_fastai.csv")) %>%
 ???
 
 Pour les 3 espèces d'intérêt. 
+
+
+
+
+---
+class: inverse, center
+background-color: white
+### Marginal occupancy
+
+```{r echo = FALSE, out.width = "85%"}
+knitr::include_graphics("img/marginal_occ.png")
+```
+
+???
+
++ On obtient les probabilités de présence de chaque espèce, lynx, chevreuil et chamois. 
+
++ En rouge, c'est l'analyse sur les photos étiquetées à la main, sans faux positifs ou négatifs donc. 
+
++ En gris-bleu, le même modèle ajusté aux photos étiquetées par notre réseau de neurones convolutif. 
+
++ Il y a clairement des biais dans l'estimation des probabilités de présence quand on se fie à l'étiquetage automatique des photos, mais étant donné que les différences ne sont pas énormes, l'écologue pourrait décider de les ignorer au regard du temps gagné par rapport à un étiquetage à la main.
+
+
+---
+class: center, top
+background-image: url(img/imagine_conf.png)
+background-size: cover
+
+<br><br><br>
+
+### <https://imaginecology.sciencesconf.org/>
+
+
+???
+
++ Toujours avec le GDR EcoStat, nous avons organisé en novembre des rencontres autour de l'utilisation des méthodes d'apprentissage profond pour l'analyse d'images et de sons en écologie.
+
++ A cette occasion, Vincent Miele a donné un exposé introductif filmé dans lequel il explique les concepts généraux, les réseaux de neurones et le vocabulaire technique. 
+
+
