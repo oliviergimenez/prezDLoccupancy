@@ -36,9 +36,9 @@ style_duo(primary_color = "#1F4257", secondary_color = "#F97B64")
 
 ???
 
-* Bonjour. Mon nom est Olivier Gimenez. Je suis chercheur CNRS au Centre d'Ecologie Fonctionnelle et Evolutive Montpellier. 
++ Bonjour. Mon nom est Olivier Gimenez. Je suis chercheur CNRS au Centre d'Ecologie Fonctionnelle et Evolutive Montpellier. 
 
-* Je vais vous parler de mes premiers pas dans le deep learning avec le logiciel R, et son application à la reconnaissance d'espèces sur des photos prises grâce à des pièges photographiques. 
++ Je vais vous parler de mes premiers pas dans le deep learning avec le logiciel R, et son application à la reconnaissance d'espèces sur des photos prises grâce à des pièges photographiques. 
 
 
 ---
@@ -54,9 +54,9 @@ background-size: cover
 
 ???
 
-* Je travaille beaucoup sur les relations prédateur-proies, des interactions entre espèces qui façonnent les communautés de grands mammifères. 
++ Je travaille beaucoup sur les relations prédateur-proies, des interactions entre espèces qui façonnent les communautés de grands mammifères. 
 
-* La ppale question que l'on se pose est de comprendre comment l'environnement et les relations entre prédateurs et proies s'articulent. 
++ La ppale question que l'on se pose est de comprendre comment l'environnement et les relations entre prédateurs et proies s'articulent. 
 
 
 ---
@@ -68,16 +68,15 @@ background-size: cover
 
 <li>Coll. A. Chaine, M. Kervellec, V. Mielle, [OFB](https://ofb.gouv.fr/) and Ain/Jura hunting associations
 <li>Precious help from folks at [Montpellier Bioinformatics and Biodiversity (MBB)](https://mbb.univ-montp2.fr/MBB/index.php)
-<li>How do environmental factors affect lynx and its preys ?
 
 .footnote[
 `r icon::fa("camera")` [Peter Bucks](https://twitter.com/peterbucks)]
 
 ???
 
-* Il s'agit d'un travail en collaboration avec Anna Chaine, Maëlis Kervellec, toutes deux stagiaires de Master, Vincent Miele, les collègues de l'Office Français de la Biodiversité et des fédérations de chasse de l'Ain et du Jura.  
++ Il s'agit d'un travail en collaboration avec Anna Chaine, Maëlis Kervellec, toutes deux stagiaires de Master, Vincent Miele, les collègues de l'Office Français de la Biodiversité et des fédérations de chasse de l'Ain et du Jura.  
 
-* J'en profite pour remercier les collègues de la PF MBB qui ont été d'une aide précieuse pour l'utilisation des machines GPU.
++ J'en profite pour remercier les collègues de la PF MBB qui ont été d'une aide précieuse pour l'utilisation des machines GPU.
 
 ---
 class: left, middle
@@ -94,9 +93,9 @@ background-size: cover
 
 ???
 
-* Les collègues de l'OFB et des fédérations de chasse collectent des données dans l'habitat naturel des espèces qui nous intéressent, grâce à des pièges photos laissés à des endroits stratégiques. 
++ Les collègues de l'OFB et des fédérations de chasse collectent des données dans l'habitat naturel des espèces qui nous intéressent, grâce à des pièges photos laissés à des endroits stratégiques. 
 
-* Alors pas avec du matériel comme celui-ci qui disparaitrait bien vite. 
++ Alors pas avec du matériel comme celui-ci qui disparaitrait bien vite. 
 
 ---
 class: left, top
@@ -105,24 +104,33 @@ background-size: cover
 
 ???
 
-* Mais plutôt ce genre de piège photo. 
++ Mais plutôt ce genre de piège photo. 
 
-* Avec un système où l'on installe un appareil de chaque côté de chemins où les prédateurs sont susceptibles de passer, comme ici une femelle et ses petits.  
-
-* Cette méthode est non-invasive, autrement dit on n'a pas besoin de capturer physiquement les animaux. Le souci est qu'on se retrouve avec des tonnes de photos auxquelles il faut associer une étiquette espèce. C'est là qu'entre en jeu le deep learning. 
-
++ Avec un système où l'on installe un appareil de chaque côté de chemins où les prédateurs sont susceptibles de passer, comme ici une femelle et ses petits.  
 
 --
 
 * Non-invasive monitoring
 
+???
+
++ Cette méthode est non-invasive, autrement dit on n'a pas besoin de capturer physiquement les animaux.
+
 --
 
 * Gigas of pix to tag by hand
 
+???
+
++ Le souci est qu'on se retrouve avec des tonnes de photos auxquelles il faut associer une étiquette espèce. 
+
 --
 
 * Deep learning?
+
+???
+
++ C'est là qu'entre en jeu le deep learning.
 
 ---
 class: center, middle
@@ -136,7 +144,7 @@ Source: [Andrew Ng](https://en.wikipedia.org/wiki/Andrew_Ng)]
 
 ???
 
-L'idée est de nourrir les algorithmes avec des photos et en sortie de récupérer l'espèce qui se trouve sur la photo. 
++ L'idée est de nourrir les algorithmes avec des photos et en sortie de récupérer l'espèce qui se trouve sur la photo. 
 
 
 ---
@@ -152,13 +160,11 @@ background-size: contain
 
 ???
 
-* Pour faire mes premiers pas en DL, j'ai utilisé imaginecology proposé par le GDR Ecologie Statistique. 
++ Pour faire mes premiers pas en DL, j'ai utilisé imaginecology proposé par le GDR Ecologie Statistique. 
 
-* Sérieusement, jetez-y un coup d'oeil. C'est bourré de ressources précieuses et pertinentes. Il y une intro au DL, des codes, des papiers, des données pour entrainer vos modèles. Et surtout tout un tas de tutoriels pour vous former. 
++ Sérieusement, jetez-y un coup d'oeil. C'est bourré de ressources précieuses et pertinentes. Il y une intro au DL, des codes, des papiers, des données pour entrainer vos modèles. Et surtout tout un tas de tutoriels pour vous former. 
 
-* Bravo à Vincent et Gaspard pour ce boulot! 
-
-Mentionner que c'est le boulot du GdR EcoStat. ON a fait des journées déjà. Je vous envois sur les cours de Vincent en particulier. 
++ Bravo à Vincent et Gaspard pour ce boulot! 
 
 
 ---
@@ -173,9 +179,9 @@ background-size: cover
 
 ???
 
-* Toujours avec le GDR EcoStat, nous avons organisé en novembre des rencontres autour de l'utilisation des méthodes d'apprentissage profond pour l'analyse d'image et de son en écologie.
++ Toujours avec le GDR EcoStat, nous avons organisé en novembre des rencontres autour de l'utilisation des méthodes d'apprentissage profond pour l'analyse d'images et de sons en écologie.
 
-* A cette occasion, Vincent Miele a donné un exposé introductif filmé dans lequel il donne les concepts généraux, les réseaux de neurones et le vocabulaire technique. 
++ A cette occasion, Vincent Miele a donné un exposé introductif filmé dans lequel il explique les concepts généraux, les réseaux de neurones et le vocabulaire technique. 
 
 
 ---
@@ -188,12 +194,19 @@ background-size: cover
 
 ???
 
-Pour mes analyses, j'ai utilisé blabla. 
-
++ Revenons-en au lynx. 
 
 --
 
 I used the [Python/PyTorch fastai deep learning library](https://github.com/fastai/fastai)
+
+???
+
++ Pour mes analyses, j'ai utilisé la librairie fastai qui repose sur le langage Python et sa librairie Pytorch. Fastai simplifie l'entrainement des réseaux de neurones avec l'utilisation des méthodes les plus récentes. 
+
+<!-- + fastai is a deep learning library which provides practitioners with high-level components that can quickly and easily provide state-of-the-art results in standard deep learning domains, and provides researchers with low-level components that can be mixed and matched to build new approaches. It aims to do both things without substantial compromises in ease of use, flexibility, or performance.  -->
+
+<!-- + The fastai library simplifies training fast and accurate neural nets using modern best practices. See the fastai website to get started. The library is based on research into deep learning best practices undertaken at fast.ai, and includes “out of the box” support for vision, text, tabular, and collab (collaborative filtering) models. -->
 
 --
 
@@ -203,13 +216,9 @@ It comes with an [`R` interface](https://eagerai.github.io/fastai/) that provide
 knitr::include_graphics("img/fastai.png")
 ```
 
-<!-- RetinaNet is a single-stage object detector : for each known object on an image it can predict a class, a bounding box (a square containing the object) and a confidence score. -->
-
 ???
 
-+ fastai is a deep learning library which provides practitioners with high-level components that can quickly and easily provide state-of-the-art results in standard deep learning domains, and provides researchers with low-level components that can be mixed and matched to build new approaches. It aims to do both things without substantial compromises in ease of use, flexibility, or performance. This is possible thanks to a carefully layered architecture, which expresses common underlying patterns of many deep learning and data processing techniques in terms of decoupled abstractions. These abstractions can be expressed concisely and clearly by leveraging the dynamism of the underlying Python language and the flexibility of the PyTorch library
-
-+ The fastai library simplifies training fast and accurate neural nets using modern best practices. See the fastai website to get started. The library is based on research into deep learning best practices undertaken at fast.ai, and includes “out of the box” support for vision, text, tabular, and collab (collaborative filtering) models.
++ Le gros avantage de fastai est qu'elle vient aussi avec un package R qui propose tout un tas de fonctions pour l'utiliser. 
 
 <!-- --- -->
 <!-- class: left, top -->
@@ -231,7 +240,7 @@ background-size: cover
 
 ???
 
-Quels sont les résultats?
+Quels sont les résultats que j'ai obtenus?
 
 ---
 class: inverse, center, middle
@@ -250,6 +259,12 @@ Load the `fastai` library:
 library(fastai)
 ```
 
+???
+
++ Pour ce faire, il suffit de quelques lignes de code R. 
+
++ On charge le package fastai d'abord. 
+
 ---
 ## Some `R` code
 
@@ -267,6 +282,10 @@ dls <- ImageDataLoaders_from_folder(
                     Normalize_from_stats( imagenet_stats() )))
 ```
 
+???
+
++ Puis on charge les photos qu'on a séparées au préalable en un jeu de données d'entrainement et un jeu de données de validation, et on leur applique tout un tas de traitements. 
+
 ---
 ## Some `R` code
 
@@ -276,6 +295,10 @@ learn <- cnn_learner(dls = dls,
                      arch = resnet50(), 
                      metrics = list(accuracy, error_rate))
 ```
+
+???
+
++ On récupère un modèle déjà pré-entrainé, ici un resnet50. 
 
 ---
 ## Some `R` code
@@ -291,7 +314,7 @@ one_cycle
 
 ???
 
-We used with 20 epochs, and saved the models after each epoch for later use.
++ Puis on continue l'entrainement sur nos données. Ici j'ai utilisé 20 epochs et sauvegardé le modèle après chaque epoch pour une utilisation ultérieure. 
 
 ---
 class: center, middle
@@ -301,7 +324,7 @@ background-size: contain
 
 ???
 
-Les résultats sont plutôt bons. On arrive à détecter sur les images et classifier le lynx, et ses proies, le chamoix et le chevreuil, avec un degré de certitude élevé.
++ Les résultats sont plutôt bons. On arrive à détecter sur les images et classifier le lynx, et ses proies, le chamoix et le chevreuil, avec un degré de certitude élevé.
 
 ---
 class: center, middle
@@ -311,105 +334,8 @@ background-size: contain
 
 ???
 
-C'est le cas aussi pour d'autres espèces présentes sur les photos. 
++ C'est le cas aussi pour d'autres espèces présentes sur les photos. 
 
-
----
-class: center, middle
-background-color: white
-
-
-```{r echo=FALSE, message=FALSE, warning=FALSE}
-options(knitr.kable.NA = '')
-readr::read_csv2(here::here("dat","perf_fastai.csv")) %>% 
-  janitor::clean_names() %>%
-  kbl() %>%
-  kable_paper() %>%
-  kable_styling(full_width = F, font_size = 20) %>%
-  row_spec(13, bold = T, color = "white", background = "white") %>%
-  row_spec(14:16, bold = T) %>%
-  column_spec(1, bold = TRUE) %>%
-  save_kable(here::here("img", "perf1.png"),
-             zoom = 5)
-```
-
-<!-- ![](img/perf.png){width=80%, height=80%} -->
-
-<img src="img/perf1.png" height="600px" width="400px" />
-
-???
-
-Four metrics are given.
-
-+ Precision is the ratio tp / (tp + fp) where tp is the number of true positives and fp the number of false positives. It quantifies the ability of the classifier not to label as positive a sample that is negative. The question that this metric answers is of all pix that labeled as positive, how many actually were positive?
-
-+ The recall is the ratio tp / (tp + fn) where tp is the number of true positives and fn the number of false negatives. The recall is intuitively the ability of the classifier to find all the positive samples. The question recall answers is: of all the pix that were positive, how many did we label?
-
-+ The f1-score can be interpreted as a weighted average of the precision and recall, it reaches its best value at 1 and worst score at 0. The f1-score weights recall more than precision by a factor of 1, meaning that recall and precision are equally important. f1-score is 2 * (recall * precision) / (recall + precision)
-
-+ The support is the number of occurrences of each class in y_true (ground truth or correct target values).
-
-
----
-class: center, middle
-background-color: white
-
-
-```{r echo=FALSE, message=FALSE, warning=FALSE}
-options(knitr.kable.NA = '')
-readr::read_csv2(here::here("dat","perf_fastai.csv")) %>% 
-  janitor::clean_names() %>%
-  kbl() %>%
-  kable_paper() %>%
-  kable_styling(full_width = F, font_size = 20) %>%
-  row_spec(13:16, bold = T, color = "white", background = "#D7261E") %>%
-  row_spec(13, bold = T, color = "white", background = "white") %>%
-  row_spec(14:16, bold = T) %>%
-  column_spec(1, bold = TRUE) %>%
-  save_kable(here::here("img", "perf2.png"),
-             zoom = 5)
-```
-
-<!-- ![](img/perf.png){width=80%, height=80%} -->
-
-<img src="img/perf2.png" height="600px" width="400px" />
-
-???
-
-+ macro avg: Calculate metrics for each label, and find their unweighted mean. This does not take label imbalance into account.
-
-+ weighted avg: Calculate metrics for each label, and find their average weighted by support (the number of true instances for each label). This alters ‘macro’ to account for label imbalance.
-
-+ Accuracy is the most intuitive performance measure and it is simply a ratio of correctly predicted observation to the total observations, it is (tp + tn)/(tp + tn + fp + fn)
-
-
----
-class: center, middle
-background-color: white
-
-
-```{r echo=FALSE, message=FALSE, warning=FALSE}
-options(knitr.kable.NA = '')
-readr::read_csv2(here::here("dat","perf_fastai.csv")) %>% 
-  janitor::clean_names() %>%
-  kbl() %>%
-  kable_paper() %>%
-  kable_styling(full_width = F, font_size = 20) %>%
-  row_spec(c(3,5,9), bold = T, color = "white", background = "#D7261E") %>%
-  row_spec(13, bold = T, color = "white", background = "white") %>%
-  row_spec(14:16, bold = T) %>%
-  column_spec(1, bold = TRUE) %>%
-  save_kable(here::here("img", "perf.png"),
-             zoom = 5)
-```
-
-<!-- ![](img/perf.png){width=80%, height=80%} -->
-
-<img src="img/perf.png" height="600px" width="400px" />
-
-???
-
-Pour les 3 espèces d'intérêt. 
 
 ---
 class: inverse, center, middle
@@ -419,7 +345,7 @@ class: inverse, center, middle
 
 ???
 
-Ensuite, j'ai voulu utilisé mon modèle pour étiqueter automatiquement des photos prises avec des pièges installés sur un autre site, dans l'Ain. Ces photos ont aussi été étiquetées à la main. Ground truth. 
++ Ensuite, j'ai voulu utilisé mon modèle pour étiqueter automatiquement des photos prises avec des pièges installés sur un autre site, dans l'Ain. Ces photos ont aussi été étiquetées à la main. On connait donc la vérité.
 
 
 ---
@@ -431,6 +357,9 @@ learn %>%
   predict(pix_to_be_tagged)
 ```
 
+???
+
++ Dans R, c'est avec la fonction predict qu'on étiquette une nouvelle photo grâce au modèle entrainé aux étapes précédentes. 
 
 ---
 class: middle, center
@@ -451,19 +380,21 @@ perf_prediction
 
 ???
 
-+ Let's focus on the 3 species we're interested in, and dissect the false negatives and positives. A false negative is for example a picture in which we have a lynx, and it is predicted otherwise. A false positive is for example a picture in which we do not have a lynx, but it is predicted that we have one.
++ Les résultats peuvent être représentés sous la forme d'une matrice de confusion, avec les espèces qui se trouvent effectivement sur les photos en lignes, et les espèces qui sont prédites par l'algo en colonnes.  
 
-+ Starting with the false negatives (check out the rows of the table):
-    + lynx get falsely predicted as chat and renard above all;
-    + chamois get predicted as chevreuil sometimes;
-    + chevreuil get detected as chamois, chien and renard.
++ On se concentre sur le lynx et ses proies chevreuil et chamois et on dissèque les faux positifs et faux négatifs.  
 
-+ Lynx get sometimes detected as chamois, chamois as chevreuil, chevreuil as chamois and lynx (lots of chevreuil pictures).
++ Un faux négatif est par ex une photo sur laquelle on a un lynx mais on prédit autre chose. Un faux positif est une photo sur laquelle on n'a pas de lynx mais on prédit qu'il y en a un. 
 
-+ And the false positives (check out the columns of the table):
-    + chamois are falsely predicted as such when they are actually a bunch of other things, and chevreuil and humain above all;
-    + chevreuil are falsely predicted as such when they are actually cerf, humain, renard or vache (!);
-    + lynx are falsely predicted as such when they are actually chevreuil, vache (!), humain and renard.
++ On commence avec les faux négatifs, en ligne donc :
+    + le lynx est confondu avec chat et renard surtout ;
+    + chamois avec chevreuil parfois ;
+    + chevreuil avec chamois, chien et renard.
+
++ On continue avec les faux positifs, les colonnes donc :
+    + on prédit qu'il y a un lynx sur les photos alors que ce sont en fait des chevreuils, des vaches ou des renards sur les photos ; 
+    + on prédit qu'il y a un chamois alors qu'en fait on a surtout des chevreuils ;
+    + et pour les chevreuils, c'est en fait des cerfs, renards et vaches qu'il y a sur les photos.
 
 
 ---
@@ -473,7 +404,7 @@ background-size: cover
 
 ???
 
-C'est pas jojo. Il y a un peu de frustration, il ne faut pas le cacher... Mais passé cette frustration, on s'est posé la question, est-ce bien grave par rapport à la question écologique?
++ C'est pas jojo. Il y a un peu de frustration, il ne faut pas le cacher... Mais passée cette frustration, on s'est posés la question, est-ce bien grave par rapport à la question écologique des interactions prédateur-proie?
 
 
 ---
@@ -482,6 +413,10 @@ background-color: white
 ```{r echo = FALSE}
 knitr::include_graphics("img/rota_cover.png")
 ```
+
+???
+
++ Pour voir si les biais sont grave, on a utilisé des modèles statistiques qui permettent d'inférer les co-occurrences entre espèces en tenant compte de la difficulté de les détecter sur le terrain, les modèles dits d'occupancy. 
 
 ---
 
@@ -492,15 +427,22 @@ Load `unmarked` to fit SDMs w/ interactions and imperfect detection:
 load(unmarked)
 ```
 
+???
+
++ Ces modèles sont relativement faciles à implémenter dans R avec le package unmarked. 
+
 ---
 background-color: white
 
-<br><br>
+<br>
 
 ```{r echo = FALSE}
 knitr::include_graphics("img/species_data.png")
 ```
 
+???
+
++ Voilà un cliché des données, avec en un paneau par espèce d'intérêt, en ligne les pièges photo et en colonne le temps. En rose ce sont les non-détections, et en turquoise les détections. 
 
 ---
 ## Some `R` code
@@ -518,6 +460,15 @@ fit <- occuMulti(detformulas = detFormulas,
 fit
 ```
 
+???
+
++ A partir de ces données, il est relativement simple de construire des modèles pour tester nos hypothèses sur les interactions. 
+
++ Ici je ne regarde que les interactions possibles entre le lynx et ses proies chamois et chevreuil, tout en prenant également en compte la présence de chats et renards. 
+
++ On considère aussi une détection différente pour chaque espèce. 
+
++ Et on ajuste ce modèle par max de vrais. 
 
 ---
 class: inverse, center
@@ -528,7 +479,15 @@ background-color: white
 knitr::include_graphics("img/marginal_occ.png")
 ```
 
+???
 
++ On obtient les probabilités de présence de chaque espèce, lynx, chevreuil et chamois. 
+
++ En rouge, c'est l'analyse sur les photos étiquetées à la main, sans faux positifs ou négatifs donc. 
+
++ En gris-bleu, le même modèle ajusté aux photos étiquetées par notre réseau de neurones convolutif. 
+
++ Il y a clairement des biais dans l'estimation des probabilités de présence quand on se fie à l'étiquetage automatique des photos, mais étant donné que les différences ne sont pas énormes, l'écologue pourrait décider de les ignorer au regard du temps gagné par rapport à un étiquetage à la main.
 
 ---
 class: inverse, center
@@ -539,6 +498,11 @@ background-color: white
 knitr::include_graphics("img/conditional_occ.png")
 ```
 
+???
+
++ Maintenant quand on passe aux probabilités de présence du prédateur, conditionnellement à la présence ou absence de ses proies, c'est une autre histoire. 
+
++ Par exemple, la prob de présence du lynx sachant la présence du chevreuil et l'absence du chamois est clairement sous-estimée.
 
 ---
 class: left, top
@@ -547,23 +511,37 @@ background-size: cover
 
 # Conclusions
 
+???
+
++ En conclusion,
+
 --
 + Generalisation to another site is challenging.
+
+???
+
++ On vérifie ici que l'utilisation d'un modèle entrainé sur un site, ici le Jura, est délicate quand il s'agit de prédire sur un autre site, ici l'Ain. C'est un résultat connu. 
 
 --
 + Lack of diversity in training dataset? More pix to come.
 
+???
+
++ Le problème est sûrement lié au manque de diversité dans le jeu de données d'entrainement. On va ajouter plus de photos, avec de l'hétérogénéité. 
+
 --
 + Do not lose sight of the ecological question.
+
+???
+
++ Il est facile de se perdre dans les dédales du deep learning, mais il faut garder le cap de la question écologique, et on peut peut-être accepter des performances moyennes si on peut vivre avec le biais engendré sur les estimations des indicateurs écologiques que l'on souhaite utiliser. 
 
 --
 + Ongoing work: Account for both false negatives and false positives. 
 
 ???
 
-+ On sait par exemple que généraliser un modèle entrainé sur un site à un autre site est difficile en DL. Les pièges, les conditions environnementales, le terrain, l'exposition, des tas de choses peuvent être différentes.  
-+ Il se peut aussi que le jeu de données d'entrainement soit trop pauvre.  
-Ce que je compte faire maintenant, sur le conseil de Vincent, c'est utiliser les données des deux sites pour entrainer mon modèle. 
++ On peut toutefois sûrement faire mieux, et j'explore actuellement le développement de modèles de distribution d'espèce qui prendrait à la fois en compte les interactions et les faux positifs et faux négatifs. 
 
 
 <!-- --- -->
@@ -833,7 +811,9 @@ background-color: white
 knitr::include_graphics("img/sfee.png")
 ```
 
+???
 
+Si vous voulez allez plus loin avec deep learning et analyse d'image, n'hésitez pas à jeter un coup au regard que nous avons proposé à la SFEE avec Vincent Miele et Stéphane Dray. 
 
 
 ---
@@ -851,3 +831,101 @@ Thank you!
 Merci pour votre écoute. 
 
 
+
+
+---
+class: center, middle
+background-color: white
+
+
+```{r echo=FALSE, message=FALSE, warning=FALSE}
+options(knitr.kable.NA = '')
+readr::read_csv2(here::here("dat","perf_fastai.csv")) %>% 
+  janitor::clean_names() %>%
+  kbl() %>%
+  kable_paper() %>%
+  kable_styling(full_width = F, font_size = 20) %>%
+  row_spec(13, bold = T, color = "white", background = "white") %>%
+  row_spec(14:16, bold = T) %>%
+  column_spec(1, bold = TRUE) %>%
+  save_kable(here::here("img", "perf1.png"),
+             zoom = 5)
+```
+
+<!-- ![](img/perf.png){width=80%, height=80%} -->
+
+<img src="img/perf1.png" height="600px" width="400px" />
+
+???
+
+Four metrics are given.
+
++ Precision is the ratio tp / (tp + fp) where tp is the number of true positives and fp the number of false positives. It quantifies the ability of the classifier not to label as positive a sample that is negative. The question that this metric answers is of all pix that labeled as positive, how many actually were positive?
+
++ The recall is the ratio tp / (tp + fn) where tp is the number of true positives and fn the number of false negatives. The recall is intuitively the ability of the classifier to find all the positive samples. The question recall answers is: of all the pix that were positive, how many did we label?
+
++ The f1-score can be interpreted as a weighted average of the precision and recall, it reaches its best value at 1 and worst score at 0. The f1-score weights recall more than precision by a factor of 1, meaning that recall and precision are equally important. f1-score is 2 * (recall * precision) / (recall + precision)
+
++ The support is the number of occurrences of each class in y_true (ground truth or correct target values).
+
+
+---
+class: center, middle
+background-color: white
+
+
+```{r echo=FALSE, message=FALSE, warning=FALSE}
+options(knitr.kable.NA = '')
+readr::read_csv2(here::here("dat","perf_fastai.csv")) %>% 
+  janitor::clean_names() %>%
+  kbl() %>%
+  kable_paper() %>%
+  kable_styling(full_width = F, font_size = 20) %>%
+  row_spec(13:16, bold = T, color = "white", background = "#D7261E") %>%
+  row_spec(13, bold = T, color = "white", background = "white") %>%
+  row_spec(14:16, bold = T) %>%
+  column_spec(1, bold = TRUE) %>%
+  save_kable(here::here("img", "perf2.png"),
+             zoom = 5)
+```
+
+<!-- ![](img/perf.png){width=80%, height=80%} -->
+
+<img src="img/perf2.png" height="600px" width="400px" />
+
+???
+
++ macro avg: Calculate metrics for each label, and find their unweighted mean. This does not take label imbalance into account.
+
++ weighted avg: Calculate metrics for each label, and find their average weighted by support (the number of true instances for each label). This alters ‘macro’ to account for label imbalance.
+
++ Accuracy is the most intuitive performance measure and it is simply a ratio of correctly predicted observation to the total observations, it is (tp + tn)/(tp + tn + fp + fn)
+
+
+---
+class: center, middle
+background-color: white
+
+
+```{r echo=FALSE, message=FALSE, warning=FALSE}
+options(knitr.kable.NA = '')
+readr::read_csv2(here::here("dat","perf_fastai.csv")) %>% 
+  janitor::clean_names() %>%
+  kbl() %>%
+  kable_paper() %>%
+  kable_styling(full_width = F, font_size = 20) %>%
+  row_spec(c(3,5,9), bold = T, color = "white", background = "#D7261E") %>%
+  row_spec(13, bold = T, color = "white", background = "white") %>%
+  row_spec(14:16, bold = T) %>%
+  column_spec(1, bold = TRUE) %>%
+  save_kable(here::here("img", "perf.png"),
+             zoom = 5)
+```
+
+<!-- ![](img/perf.png){width=80%, height=80%} -->
+
+<img src="img/perf.png" height="600px" width="400px" />
+
+???
+
+Pour les 3 espèces d'intérêt. 
