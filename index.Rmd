@@ -393,7 +393,7 @@ background-size: cover
 
 ???
 
-+ C'est pas très satisfaisant. Il y a un peu de frustration, il ne faut pas le cacher... Mais passée cette frustration, on s'est posé la question, est-ce bien grave par rapport à la question écologique des interactions prédateur-proie?
++ C'est pas très satisfaisant. Il y a un peu de frustration... Mais passée cette frustration, on s'est posé la question, est-ce bien grave par rapport à la question écologique des interactions prédateur-proie?
 
 
 ---
@@ -431,7 +431,7 @@ knitr::include_graphics("img/species_data.png")
 
 ???
 
-+ Voilà un cliché des données, avec en un paneau par espèce d'intérêt, en ligne les pièges photo et en colonne le temps. En rose ce sont les non-détections, et en turquoise les détections. 
++ Voilà un cliché des données, avec une figure par espèce, en ligne les pièges photo et en colonne le temps. En rose ce sont les non-détections, et en turquoise les détections. 
 
 ---
 ## Some `R` code
@@ -503,7 +503,7 @@ background-size: cover
 
 ???
 
-+ On a vu que l'utilisation d'un modèle entrainé sur un site pour prédire sur un autre site est délicate. C'est un résultat connu. 
++ On a vu que l'utilisation d'un modèle entrainé sur un site pour prédire sur un autre site est délicate. 
 
 --
 + Lack of diversity in training dataset? More pix to come.
@@ -517,10 +517,10 @@ background-size: cover
 
 ???
 
-+ Il est facile de se perdre dans les dédales du deep learning, mais il faut garder le cap de la question écologique, et on peut peut-être accepter des performances moyennes des algorithmes si on peut vivre avec le biais engendré sur les indicateurs écologiques que l'on souhaite utiliser. 
++ Il est facile de se perdre dans les dédales du deep learning, mais il faut garder le cap de la question écologique, et on peut peut-être accepter des performances moyennes des algorithmes si on peut vivre avec le biais engendré sur les indicateurs écologiques. 
 
 --
-+ Ongoing work: Account for both false negatives and false positives. 
++ Ongoing work: Accounting for both false negatives and false positives. 
 
 ???
 
@@ -796,7 +796,7 @@ knitr::include_graphics("img/sfee.png")
 
 ???
 
-Si vous voulez allez plus loin avec deep learning et analyse d'image, n'hésitez pas à jeter un coup au regard que nous avons proposé à la SFEE avec Vincent Miele et Stéphane Dray. 
+Si vous voulez allez plus loin avec deep learning et l'analyse d'image, n'hésitez pas à jeter un coup au regard que nous avons proposé à la SFEE avec Vincent Miele et Stéphane Dray. 
 
 
 ---
