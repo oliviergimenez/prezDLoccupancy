@@ -6,4 +6,4 @@ Check out the slides at [https://oliviergimenez.github.io/prezimaginecology/](ht
 
 Slides created with [remark.js](http://remarkjs.com/) and the R package [**xaringan**](https://github.com/yihui/xaringan).
 
-![](https://github.com/oliviergimenez/prezDLoccupancy/blob/master/img/affiche_ia_vf.jpg?raw=true)
+![](https://github.com/oliviergimenez/prezDLoccupancy/blob/master/img/affiche_ia_vf.png)
