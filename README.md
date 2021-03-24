@@ -5,3 +5,5 @@ This repo contains the slides for a short talk I gave at the [Journée Scientifi
 Check out the slides at [https://oliviergimenez.github.io/prezimaginecology/](https://oliviergimenez.github.io/prezimaginecology/).
 
 Slides created with [remark.js](http://remarkjs.com/) and the R package [**xaringan**](https://github.com/yihui/xaringan).
+
+![](img/affiche_ia_vf.jpg)
