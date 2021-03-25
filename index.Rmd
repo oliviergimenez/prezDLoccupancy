@@ -66,7 +66,7 @@ background-size: cover
 
 <br><br><br><br><br><br><br><br><br><br>
 
-<li>Coll. A. Chaine, M. Kervellec, V. Mielle, [OFB](https://ofb.gouv.fr/) and Ain/Jura hunting associations
+<li>Coll. A. Chaine, M. Kervellec, V. Miele, [OFB](https://ofb.gouv.fr/) and Ain/Jura hunting associations
 <li>Precious help from folks at [Montpellier Bioinformatics and Biodiversity (MBB)](https://mbb.univ-montp2.fr/MBB/index.php)
 
 .footnote[
