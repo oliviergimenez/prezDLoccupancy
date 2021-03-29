@@ -54,7 +54,7 @@ background-size: cover
 
 ???
 
-+ Je travaille beaucoup sur les relations prédateur-proies, des interactions entre espèces qui façonnent les communautés de grands mammifères. 
++ Je travaille sur les relations prédateur-proies, des interactions entre espèces qui façonnent les communautés de grands mammifères. 
 
 + La question que l'on se pose est de comprendre comment l'environnement et les relations entre prédateurs et proies s'articulent. 
 
@@ -74,28 +74,9 @@ background-size: cover
 
 ???
 
-+ Il s'agit d'un travail en collaboration avec Anna Chaine et Maëlis Kervellec, toutes deux stagiaires de Master, Vincent Miele, les collègues de l'Office Français de la Biodiversité et des fédérations de chasse de l'Ain et du Jura.  
++ Il s'agit d'un travail en collaboration avec Anna Chaine et Maëlis Kervellec, Vincent Miele, les collègues de l'Office Français de la Biodiversité et des fédérations de chasse de l'Ain et du Jura.  
 
 + J'en profite pour remercier les collègues de la plateforme Montpellier Bioinformatique Biodiversité qui ont été d'une aide précieuse dans l'utilisation des machines GPU.
-
-<!-- --- -->
-<!-- class: left, middle -->
-<!-- background-image: url(img/cameratraps.jpg) -->
-<!-- background-size: cover  -->
-
-<!-- <br><br><br> -->
-
-<!-- ## Camera traps -->
-
-<!-- .footnote[ -->
-<!-- `r icon::fa("camera")` [Tiard Schulz](https://tiard-schulz-fotografie.jimdosite.com/)] -->
-
-
-<!-- ??? -->
-
-<!-- + Les collègues de l'OFB et des fédérations de chasse collectent des données dans l'habitat naturel des espèces qui nous intéressent, grâce à des pièges photos laissés à des endroits stratégiques.  -->
-
-<!-- + Alors pas avec du matériel comme celui-ci qui disparaitrait bien vite.  -->
 
 ---
 class: left, top
@@ -136,7 +117,6 @@ background-size: cover
 class: center, middle
 background-image: url(https://miro.medium.com/max/3840/1*oB3S5yHHhvougJkPXuc8og.gif)
 background-size: contain 
-<!-- * Je suis curieux. J'aime comprendre. J'aime bcp R.  -->
 
 .footnote[
 Source: [Andrew Ng](https://en.wikipedia.org/wiki/Andrew_Ng)]
@@ -144,7 +124,7 @@ Source: [Andrew Ng](https://en.wikipedia.org/wiki/Andrew_Ng)]
 
 ???
 
-+ L'idée est de nourrir les algorithmes avec des photos pour en sortie récupérer l'espèce qui se trouve sur la photo. 
++ L'idée est de nourrir les algorithmes avec des photos en entrée pour en sortie récupérer l'espèce qui se trouve sur la photo. 
 
 
 ---
@@ -160,14 +140,9 @@ background-size: contain
 
 ???
 
-+ Pour faire mes premiers pas en DL, j'ai utilisé imaginecology que l'on propose avec le GDR Ecologie Statistique. 
++ Pour faire mes premiers pas en deep-learning, j'ai utilisé imaginecology que l'on propose avec le GDR Ecologie Statistique. 
 
-+ Jetez-y un coup d'oeil. C'est bourré de ressources précieuses et pertinentes. Il y une intro au DL en vidéo, et tout un tas de tutoriels pour vous former. 
-
-<!-- + Il y a aussi un lien vers les rencontres que nous avons organisées en novembre autour de l'utilisation des méthodes d'apprentissage profond pour l'analyse d'images et de sons en écologie -->
-
-<!-- + Bravo à Vincent et Gaspard pour ce boulot!  -->
-
++ C'est un site bourré de ressources, avec une intro au deep-learning en vidéo par exemple, ou encore tout un tas de tutoriels pour vous former. 
 
 ---
 class: right, top
@@ -189,12 +164,6 @@ I used the [Python/PyTorch fastai deep learning library](https://github.com/fast
 
 + Pour mes analyses, j'ai utilisé la librairie fast-ai qui repose sur le langage Python et sa librairie Pytorch. 
 
-<!-- Fastai simplifie l'entrainement des réseaux de neurones avec l'utilisation des méthodes les plus récentes.  -->
-
-<!-- + fastai is a deep learning library which provides practitioners with high-level components that can quickly and easily provide state-of-the-art results in standard deep learning domains, and provides researchers with low-level components that can be mixed and matched to build new approaches. It aims to do both things without substantial compromises in ease of use, flexibility, or performance.  -->
-
-<!-- + The fastai library simplifies training fast and accurate neural nets using modern best practices. See the fastai website to get started. The library is based on research into deep learning best practices undertaken at fast.ai, and includes “out of the box” support for vision, text, tabular, and collab (collaborative filtering) models. -->
-
 --
 
 It comes with an [`R` interface](https://eagerai.github.io/fastai/) that provides `R` wrappers to fastai.
@@ -205,17 +174,7 @@ knitr::include_graphics("img/fastai.png")
 
 ???
 
-+ Le gros avantage de cette librairie est qu'elle vient avec un package R qui propose tout un tas de fonctions pour l'utiliser. 
-
-<!-- --- -->
-<!-- class: left, top -->
-<!-- background-image: url(https://thumbs.gfycat.com/FreeThoughtfulJumpingbean-size_restricted.gif) -->
-<!-- background-size: cover  -->
-
-<!-- ??? -->
-
-<!-- Avant de passer aux résultats, je rappelle que je suis débutant. Je me forme avec l'aide de Vincent qui n'est toutefois pas responsables de mes errements.  -->
-
++ Un avantage de cette librairie est qu'elle vient avec un package R qui propose tout un tas de fonctions pour l'utiliser. 
 
 ---
 class: inverse, right, top
@@ -315,17 +274,6 @@ background-size: contain
 
 + Les résultats sont plutôt bons. On arrive à classifier le lynx, et ses proies, le chamoix et le chevreuil, avec un degré de certitude satisfaisant.
 
-<!-- --- -->
-<!-- class: center, middle -->
-<!-- background-image: url(img/others.png) -->
-<!-- background-size: contain  -->
-
-
-<!-- ??? -->
-
-<!-- + C'est le cas aussi pour d'autres espèces présentes sur les photos.  -->
-
-
 ---
 class: inverse, center, middle
 
@@ -369,22 +317,15 @@ perf_prediction
 
 ???
 
-+ Les résultats peuvent être représentés sous la forme d'une matrice de confusion, avec les espèces qui sont prédites par l'algo en colonnes, et les espèces qui se trouvent réellement sur les photos en lignes.  
++ Les résultats peuvent être représentés sous la forme d'une matrice de confusion, avec les espèces qui sont prédites par l'algorithme en colonnes, et les espèces qui se trouvent effectivement sur les photos en lignes.  
 
 + On se concentre sur le lynx et on dissèque les faux positifs et faux négatifs.  
 
 + Un faux négatif est par exemple une photo sur laquelle on a un lynx mais on prédit une autre espèce. Un faux positif est une photo sur laquelle on n'a pas de lynx mais on prédit qu'il y en a un. 
 
 + On commence avec les faux négatifs, en ligne donc, on voit que le lynx est confondu avec chat et renard surtout. 
-    <!-- + le lynx est confondu avec chat et renard surtout ; -->
-    <!-- + chamois avec chevreuil parfois ; -->
-    <!-- + chevreuil avec chamois, chien et renard. -->
 
 + On continue avec les faux positifs, les colonnes donc, et on voit qu'on prédit qu'il y a un lynx sur les photos alors que ce sont en fait des chevreuils, ou des renards sur les photos.
-    <!-- + on prédit qu'il y a un lynx sur les photos alors que ce sont en fait des chevreuils, des vaches ou des renards sur les photos ;  -->
-    <!-- + on prédit qu'il y a un chamois alors qu'en fait on a surtout des chevreuils ; -->
-    <!-- + et pour les chevreuils, c'est en fait des cerfs, renards et vaches qu'il y a sur les photos. -->
-
 
 ---
 class: center, middle
@@ -393,7 +334,7 @@ background-size: cover
 
 ???
 
-+ C'est pas très satisfaisant. Il y a un peu de frustration... Mais passée cette frustration, on s'est posé la question, est-ce bien grave par rapport à la question écologique des interactions prédateur-proie?
++ C'est pas très satisfaisant. Mais passée la frustration, on s'est posé la question, est-ce bien grave par rapport à la question écologique des interactions prédateur-proie?
 
 
 ---
@@ -405,7 +346,7 @@ knitr::include_graphics("img/rota_cover.png")
 
 ???
 
-+ Pour voir si les biais sont graves, on a utilisé des modèles statistiques qui permettent d'inférer les co-occurrences entre espèces en tenant compte de la difficulté de les détecter sur le terrain, les modèles dits d'occupancy. 
++ Pour voir si les biais sont graves, on a utilisé des modèles statistiques qui permettent d'inférer les co-occurrences entre espèces en tenant compte de la difficulté de les détecter sur le terrain - les modèles dits d'occupancy. 
 
 ---
 
@@ -456,7 +397,7 @@ fit
 
 + A partir de ces données, on construit des modèles pour tester nos hypothèses sur les interactions. 
 
-+ Ici je ne regarde que les interactions possibles entre le lynx et ses proies chamois et chevreuil. 
++ Ici je ne regarde que les interactions possibles entre le lynx et ses proies. 
 
 + On considère aussi une détection différente pour chaque espèce. 
 
@@ -475,7 +416,7 @@ knitr::include_graphics("img/conditional_occ.png")
 
 ???
 
-+ On obtient les probabilités de présence du lynx, conditionnellement à la présence ou absence de ses proies, chevreuil et chamois. 
++ On obtient les probabilités de présence du lynx, conditionnellement à la présence ou absence de ses proies. 
 
 + En rouge, c'est l'analyse sur les photos étiquetées à la main, sans faux positifs ni faux négatifs donc. 
 
@@ -510,7 +451,7 @@ background-size: cover
 
 ???
 
-+ Le problème est sûrement lié au manque de diversité dans le jeu de données d'entrainement. On va ajouter plus de photos, avec de l'hétérogénéité. 
++ Le problème est sûrement lié au manque de diversité dans le jeu de données d'entrainement. On va ajouter plus de photos. 
 
 --
 + Do not lose sight of the ecological question.
@@ -526,266 +467,6 @@ background-size: cover
 
 + Malgré tout, on peut sûrement faire mieux, et j'explore actuellement le développement de modèles de distribution d'espèce qui prendrait à la fois en compte les interactions et les faux positifs et faux négatifs. 
 
-
-<!-- --- -->
-<!-- class: inverse, center, middle -->
-<!-- # Lessons learned -->
-
-<!-- ??? -->
-
-<!-- Je finirai cet exposé en donnant quelques leçons que j'ai tirées en cours de chemin, vous en faites ce que vous voulez. -->
-
-<!-- --- -->
-
-<!-- .pull-left[ -->
-
-<!-- ### Terminology is tricky -->
-
-
-
-<!-- ] -->
-
-<!-- .pull-right[ -->
-<!-- ] -->
-
-<!-- ??? -->
-
-<!-- La terminologie peut être un obstable. Sur imaginecology, vous trouverez un glossaire qui vous sauvera. Le point de vue d'une statisticienne peut aussi être utile pour faire le // avec un vocabulaire plus familier.   -->
-
-<!-- --- -->
-
-<!-- .pull-left[ -->
-
-<!-- ### Terminology is tricky -->
-
-<!-- * [imaginecology](https://ecostat.gitlab.io/imaginecology/basics.html) glossary  -->
-
-
-
-<!-- ] -->
-
-<!-- .pull-right[ -->
-<!-- ![](img/glossary.png) -->
-<!-- ] -->
-
-<!-- --- -->
-
-<!-- .pull-left[ -->
-
-<!-- ### Terminology is tricky -->
-
-<!-- * [imaginecology](https://ecostat.gitlab.io/imaginecology/basics.html) glossary  -->
-
-<!-- * [Statistical view](https://www.stat.colostate.edu/~jah/talks_public_html/isec2020/index.html) by Jennifer Hoeting -->
-
-
-
-<!-- ] -->
-
-<!-- .pull-right[<br><br><br><br><br> -->
-<!-- ![](img/hoeting.png) -->
-<!-- ] -->
-
-
-<!-- --- -->
-
-<!-- .pull-left[ -->
-
-<!-- ### Terminology is tricky -->
-
-<!-- * [imaginecology](https://ecostat.gitlab.io/imaginecology/basics.html) glossary  -->
-
-<!-- * [Statistical view](https://www.stat.colostate.edu/~jah/talks_public_html/isec2020/index.html) by Jennifer Hoeting -->
-
-<!-- ### What about -->
-
-
-<!-- ] -->
-
-<!-- .pull-right[ -->
-<!-- ] -->
-
-<!-- --- -->
-
-<!-- .pull-left[ -->
-
-<!-- ### Terminology is tricky -->
-
-<!-- * [imaginecology](https://ecostat.gitlab.io/imaginecology/basics.html) glossary  -->
-
-<!-- * [Statistical view](https://www.stat.colostate.edu/~jah/talks_public_html/isec2020/index.html) by Jennifer Hoeting -->
-
-<!-- ### What about -->
-
-<!-- * Reproducibility? -->
-
-
-<!-- ] -->
-
-<!-- .pull-right[<br><br><br><br><br><br><br><br><br><br><br> -->
-<!-- ![](img/reproducibility-graphic-online1.jpeg) -->
-<!-- ] -->
-
-<!-- Je me suis posé pas mal de questions sur la reproductibilité. Entrainer un modèle s'apparente parfois à de la cuisine avec sa part d'improvisation.   -->
-
-
-<!-- --- -->
-
-<!-- .pull-left[ -->
-
-<!-- ### Terminology is tricky -->
-
-<!-- * [imaginecology](https://ecostat.gitlab.io/imaginecology/basics.html) glossary  -->
-
-<!-- * [Statistical view](https://www.stat.colostate.edu/~jah/talks_public_html/isec2020/index.html) by Jennifer Hoeting -->
-
-<!-- ### What about -->
-
-<!-- * Reproducibility? -->
-
-<!-- * Legal and ethical issues? -->
-
-
-<!-- ] -->
-
-<!-- .pull-right[<br><br><br><br><br><br><br><br><br><br><br><br> -->
-<!-- ![](img/ethics.png) -->
-<!-- ] -->
-
-
-<!-- ??? -->
-
-
-<!-- Il y a aussi des questions de droit et d'éthique qui se posent quand on traite des photos sur lesquelles nos conspécifiques se mettent en scène.   -->
-
-
-<!-- --- -->
-
-<!-- .pull-left[ -->
-
-<!-- ### Terminology is tricky -->
-
-<!-- * [imaginecology](https://ecostat.gitlab.io/imaginecology/basics.html) glossary  -->
-
-<!-- * [Statistical view](https://www.stat.colostate.edu/~jah/talks_public_html/isec2020/index.html) by Jennifer Hoeting -->
-
-<!-- ### What about -->
-
-<!-- * Reproducibility? -->
-
-<!-- * Legal and ethical issues? -->
-
-<!-- * Carbon footprint? -->
-
-
-<!-- ] -->
-
-<!-- .pull-right[<br><br><br><br><br><br><br><br><br><br><br><br> -->
-<!-- ![](https://wp.technologyreview.com/wp-content/uploads/2019/06/datacentercolored-10.jpg?fit=1708,1138) -->
-<!-- ] -->
-
-
-<!-- ??? -->
-
-
-<!-- Se pose aussi la question de l'empreinte écologique de l'approche DL comme on a souvent besoin d'utiliser des cartes graphiques, très gourmandes en énergie, sur de longues périodes.   -->
-
-
-
-<!-- --- -->
-
-<!-- .pull-left[ -->
-
-<!-- ### Terminology is tricky -->
-
-<!-- * [imaginecology](https://ecostat.gitlab.io/imaginecology/basics.html) glossary  -->
-
-<!-- * [Statistical view](https://www.stat.colostate.edu/~jah/talks_public_html/isec2020/index.html) by Jennifer Hoeting -->
-
-<!-- ### What about -->
-
-<!-- * Reproducibility? -->
-
-<!-- * Legal and ethical issues? -->
-
-<!-- * Carbon footprint? -->
-
-<!-- ### Ask the experts -->
-
-
-<!-- ] -->
-
-<!-- .pull-right[ -->
-<!-- ] -->
-
-
-<!-- ??? -->
-
-<!-- Enfin, je conseille à celles et ceux qui comme moi veulent se former d'aller voir ce que font les pros. Il y a par exemple cette compétition organisée par Sara Beery où vous retrouverez les conseils des meilleures équipes. Je vous suggère d'ailleurs de suivre Sara, ainsi que Mikey Tabak, deux étoiles montantes du DL pour l'écologie.   -->
-
-<!-- Slack de Sarah!! -->
-
-
-<!-- --- -->
-
-<!-- .pull-left[ -->
-
-<!-- ### Terminology is tricky -->
-
-<!-- * [imaginecology](https://ecostat.gitlab.io/imaginecology/basics.html) glossary  -->
-
-<!-- * [Statistical view](https://www.stat.colostate.edu/~jah/talks_public_html/isec2020/index.html) by Jennifer Hoeting -->
-
-<!-- ### What about -->
-
-<!-- * Reproducibility? -->
-
-<!-- * Legal and ethical issues? -->
-
-<!-- * Carbon footprint? -->
-
-<!-- ### Ask the experts -->
-
-<!-- * [iWildCam](https://www.kaggle.com/c/iwildcam-2020-fgvc7/overview) competition -->
-
-
-<!-- ] -->
-
-<!-- .pull-right[<br><br><br><br><br><br><br><br><br><br><br><br> -->
-<!-- ![](img/iwildcam.png) -->
-<!-- ] -->
-
-
-<!-- --- -->
-
-<!-- .pull-left[ -->
-
-<!-- ### Terminology is tricky -->
-
-<!-- * [imaginecology](https://ecostat.gitlab.io/imaginecology/basics.html) glossary  -->
-
-<!-- * [Statistical view](https://www.stat.colostate.edu/~jah/talks_public_html/isec2020/index.html) by Jennifer Hoeting -->
-
-<!-- ### What about -->
-
-<!-- * Reproducibility? -->
-
-<!-- * Legal and ethical issues? -->
-
-<!-- * Carbon footprint? -->
-
-<!-- ### Ask the experts -->
-
-<!-- * [iWildCam](https://www.kaggle.com/c/iwildcam-2020-fgvc7/overview) competition -->
-
-<!-- * Follow [S. Beery](https://twitter.com/sarameghanbeery) and [M. Tabak](https://twitter.com/Mikey_QSC) -->
-
-
-<!-- ] -->
-
-<!-- .pull-right[![](img/tweet.png)] -->
-
-
 ---
 background-color: white
 
@@ -796,7 +477,7 @@ knitr::include_graphics("img/sfee.png")
 
 ???
 
-Si vous voulez allez plus loin avec deep learning et l'analyse d'image, n'hésitez pas à jeter un coup au regard que nous avons proposé à la SFEE avec Vincent Miele et Stéphane Dray. 
+Si vous voulez allez plus loin avec le deep learning et l'analyse d'image, n'hésitez pas à jeter un coup au regard que nous avons proposé à la SFEE avec Vincent Miele et Stéphane Dray. 
 
 
 ---
