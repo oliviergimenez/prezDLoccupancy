@@ -70,9 +70,9 @@ background-size: cover
 
 ???
 
-+ Bonjour. Mon nom est Olivier Gimenez. Je suis chercheur CNRS au Centre d'Ecologie Fonctionnelle et Evolutive à Montpellier. 
++ Hi My name is Olivier Gimenez. I'm a CNRS scientist at the Centre for Functional and Evolutionary Ecology in Montpellier (France). 
 
-+ Je vais vous parler de mes premiers pas dans le deep learning avec le logiciel R, et l'étude des interactions entre espèces à partir de pièges photos. 
++ I'm gonna tell you about my first steps in deep learning (DL) with R, and the study of species interactions w/ camera traps. 
 
 
 ---
@@ -88,9 +88,9 @@ background-size: cover
 
 ???
 
-+ Je travaille sur les relations prédateur-proies, des interactions entre espèces qui façonnent les communautés de grands mammifères. 
++ I work on pred-prey relationships, interactions between species that drive large mammals communities. 
 
-+ La question que l'on se pose est de comprendre comment l'environnement et les relations entre prédateurs et proies s'articulent. 
++ We aim at understanding how the environment, pred and prey interact with each other. 
 
 
 ---
@@ -108,9 +108,9 @@ background-size: cover
 
 ???
 
-+ Il s'agit d'un travail en collaboration avec Anna Chaine et Maëlis Kervellec, Vincent Miele, les collègues de l'Office Français de la Biodiversité et des fédérations de chasse de l'Ain et du Jura.  
++ This is joint work w/ Anna Chaine and Maëlis Kervellec, Vincent Miele, colleagues from the French Office for Biodiversity and game federations from Ain and Jura counties.  
 
-+ J'en profite pour remercier les collègues de la plateforme Montpellier Bioinformatique Biodiversité qui ont été d'une aide précieuse dans l'utilisation des machines GPU.
++ In passing, I would also like to thank colleagues from the Montpellier Bioinformatics Biodiversity platform who've been very helpful in using GPU machines.
 
 ---
 class: left, top
@@ -119,9 +119,9 @@ background-size: cover
 
 ???
 
-+ Les collègues de l'OFB et des fédérations de chasse collectent des données dans l'habitat naturel des espèces qui nous intéressent, grâce à des pièges photos laissés à des endroits stratégiques. 
++ Colleagues from OFB and game federations collect data on species of interest, with camera traps set up at strategic places. 
 
-+ Précisément de chaque côté de chemins où les prédateurs sont susceptibles de passer, comme ici une femelle et ses petits.  
++ On both sides of forest paths where species tend to pass, like on the pix a lynx w/ her kittens.  
 
 --
 
@@ -129,7 +129,7 @@ background-size: cover
 
 ???
 
-+ Cette méthode est non-invasive, autrement dit on n'a pas besoin de capturer physiquement les animaux.
++ This method is non-invasive, in other words we do not need to physically capture the individuals.
 
 --
 
@@ -137,7 +137,7 @@ background-size: cover
 
 ???
 
-+ Le souci est qu'on se retrouve avec des tonnes de photos auxquelles il faut associer une étiquette espèce. 
++ The thing is that we get tons of pictures that we have to tag with a species label. 
 
 --
 
@@ -145,7 +145,7 @@ background-size: cover
 
 ???
 
-+ C'est là qu'entre en jeu le deep learning.
++ Here it comes deep learning.
 
 ---
 class: center, middle
@@ -158,7 +158,7 @@ Source: [Andrew Ng](https://en.wikipedia.org/wiki/Andrew_Ng)]
 
 ???
 
-+ L'idée est de nourrir les algorithmes avec des photos en entrée pour en sortie récupérer l'espèce qui se trouve sur la photo. 
++ The idea is to feed algo with pix as inputs, and get the species ID as outputs. 
 
 
 ---
@@ -174,9 +174,9 @@ background-size: contain
 
 ???
 
-+ Pour faire mes premiers pas en deep-learning, j'ai utilisé imaginecology que l'on propose avec le GDR Ecologie Statistique. 
++ For my first steps in deep-learning, I used imaginecology a website we develop w/ our French group in Statistical Ecology. 
 
-+ C'est un site bourré de ressources, avec une intro au deep-learning en vidéo par exemple, ou encore tout un tas de tutoriels pour vous former. 
++ Check it out, there is an intro to deep learning in video the one and only Vincent Miele, and several tutorials. 
 
 ---
 class: right, top
@@ -188,7 +188,7 @@ background-size: cover
 
 ???
 
-+ Revenons-en au lynx. 
++ Going back to the lynx. 
 
 --
 
@@ -196,7 +196,7 @@ I used the [Python/PyTorch fastai deep learning library](https://github.com/fast
 
 ???
 
-+ Pour mes analyses, j'ai utilisé la librairie fast-ai qui repose sur le langage Python et sa librairie Pytorch. 
++ For my analyses, I used the fast-ai library which relies on Python and its library Pytorch. 
 
 --
 
@@ -206,7 +206,7 @@ It comes with an [`R` interface](https://eagerai.github.io/fastai/) that provide
 
 ???
 
-+ Un avantage de cette librairie est qu'elle vient avec un package R qui propose tout un tas de fonctions pour l'utiliser. 
++ The advantage of this library is that it comes with a R package that provides a bunch of functions to use it. 
 
 ---
 class: inverse, right, top
@@ -218,7 +218,7 @@ background-size: cover
 
 ???
 
-Quels sont les résultats que j'ai obtenus?
+What are the results I got?
 
 ---
 class: inverse, center, middle
@@ -227,7 +227,7 @@ class: inverse, center, middle
 
 ???
 
-Dans un premier temps, j'ai fait du transfer learning sur un site d'étude dans le Jura où on avait tout un tas de photos déjà étiquetées. 
+First, I did some transfer learning on a study site in the Jura county where we had a ton of pictures manually tagged. 
 
 ---
 ## Some `R` code
@@ -240,9 +240,9 @@ library(fastai)
 
 ???
 
-+ Pour ce faire, il suffit de quelques lignes de code R. 
++ To do so, you only need a few lines of R code. 
 
-+ On charge le package fast-ai d'abord. 
++ Load the fast-ai library first.  
 
 ---
 ## Some `R` code
@@ -264,7 +264,7 @@ dls &lt;- ImageDataLoaders_from_folder(
 
 ???
 
-+ Puis on charge les photos qu'on a séparées au préalable en un jeu de données d'entrainement et un jeu de données de validation, et on leur applique tout un tas de traitements. 
++ Then load the pictures that we split into a training and validation datasets, and apply all sorts of treatments to these pictures.  
 
 ---
 ## Some `R` code
@@ -279,7 +279,7 @@ learn &lt;- cnn_learner(dls = dls,
 
 ???
 
-+ On récupère un modèle déjà pré-entrainé, ici un resnet50. 
++ Get the pre-trained model architecture, here a resnet50.
 
 ---
 ## Some `R` code
@@ -296,9 +296,9 @@ one_cycle
 
 ???
 
-+ Puis on fait l'entrainement sur nos données. 
++ Then continue training the model with our data. 
 
-+ Ici j'ai utilisé 20 epochs et sauvegardé le modèle après chaque epoch pour une utilisation ultérieure. 
++ I used 20 epochs and saved the model after each epoch for later use. 
 
 ---
 class: center, middle
@@ -308,7 +308,7 @@ background-size: contain
 
 ???
 
-+ Les résultats sont plutôt bons. On arrive à classifier le lynx, et ses proies, le chamoix et le chevreuil, avec un degré de certitude satisfaisant.
++ The results are rather good. We manage to classify the lynx and its main prey, chamois and roe deer, with a satisfying level of certainty.
 
 ---
 class: inverse, center, middle
@@ -318,8 +318,7 @@ class: inverse, center, middle
 
 ???
 
-+ Ensuite, j'ai voulu utilisé mon modèle pour étiqueter automatiquement des photos prises avec des pièges installés sur un autre site, dans l'Ain. Ces photos ont aussi été étiquetées à la main. On connait donc la vérité.
-
++ Then, I used my freshly trained model to tag automatically a bunch of pictures we had on another study site, in the Ain county. These pictures were also manually tagged, hence we knew the species for sure. 
 
 ---
 ## Some `R` code
@@ -333,27 +332,27 @@ learn %&gt;%
 
 ???
 
-+ Dans R, c'est avec la fonction predict qu'on étiquette une nouvelle photo grâce au modèle entrainé aux étapes précédentes. 
++ In R, we use the predict function to tag a new pix with the model we've trained in previous steps.
 
 ---
 class: middle, center
 background-image: url(img/blackboard.jpg)
 background-size: cover 
 
-<div id="htmlwidget-9c53ab51456cb473d945" style="width:100%;height:500px;" class="highchart html-widget"></div>
-<script type="application/json" data-for="htmlwidget-9c53ab51456cb473d945">{"x":{"hc_opts":{"chart":{"reflow":true},"title":{"text":null},"yAxis":{"title":{"text":"Actual"},"categories":["blaireaux","cavalier","cerf","chamois","chasseur","chat","chevreuil","chien","ecureuil","fouine","humain","lievre","lynx","martre","oiseaux","renard","sangliers","vaches","vehicule"],"reversed":true},"credits":{"enabled":false},"exporting":{"enabled":false},"boost":{"enabled":false},"plotOptions":{"series":{"label":{"enabled":false},"turboThreshold":0,"showInLegend":false,"boderWidth":0,"dataLabels":{"enabled":true}},"treemap":{"layoutAlgorithm":"squarified"}},"series":[{"data":[{"x":0,"y":0,"value":408,"name":"blaireaux ~ blaireaux"},{"x":0,"y":1,"value":2,"name":"blaireaux ~ cavalier"},{"x":0,"y":2,"value":0,"name":"blaireaux ~ cerf"},{"x":0,"y":3,"value":2,"name":"blaireaux ~ chamois"},{"x":0,"y":4,"value":0,"name":"blaireaux ~ chasseur"},{"x":0,"y":5,"value":3,"name":"blaireaux ~ chat"},{"x":0,"y":6,"value":3,"name":"blaireaux ~ chevreuil"},{"x":0,"y":7,"value":0,"name":"blaireaux ~ chien"},{"x":0,"y":8,"value":0,"name":"blaireaux ~ ecureuil"},{"x":0,"y":9,"value":0,"name":"blaireaux ~ fouine"},{"x":0,"y":10,"value":11,"name":"blaireaux ~ humain"},{"x":0,"y":11,"value":1,"name":"blaireaux ~ lievre"},{"x":0,"y":12,"value":0,"name":"blaireaux ~ lynx"},{"x":0,"y":13,"value":2,"name":"blaireaux ~ martre"},{"x":0,"y":14,"value":0,"name":"blaireaux ~ oiseaux"},{"x":0,"y":15,"value":9,"name":"blaireaux ~ renard"},{"x":0,"y":16,"value":18,"name":"blaireaux ~ sangliers"},{"x":0,"y":17,"value":0,"name":"blaireaux ~ vaches"},{"x":0,"y":18,"value":2,"name":"blaireaux ~ vehicule"},{"x":1,"y":0,"value":0,"name":"cavalier ~ blaireaux"},{"x":1,"y":1,"value":947,"name":"cavalier ~ cavalier"},{"x":1,"y":2,"value":0,"name":"cavalier ~ cerf"},{"x":1,"y":3,"value":0,"name":"cavalier ~ chamois"},{"x":1,"y":4,"value":0,"name":"cavalier ~ chasseur"},{"x":1,"y":5,"value":0,"name":"cavalier ~ chat"},{"x":1,"y":6,"value":1,"name":"cavalier ~ chevreuil"},{"x":1,"y":7,"value":1,"name":"cavalier ~ chien"},{"x":1,"y":8,"value":0,"name":"cavalier ~ ecureuil"},{"x":1,"y":9,"value":0,"name":"cavalier ~ fouine"},{"x":1,"y":10,"value":68,"name":"cavalier ~ humain"},{"x":1,"y":11,"value":0,"name":"cavalier ~ lievre"},{"x":1,"y":12,"value":0,"name":"cavalier ~ lynx"},{"x":1,"y":13,"value":0,"name":"cavalier ~ martre"},{"x":1,"y":14,"value":0,"name":"cavalier ~ oiseaux"},{"x":1,"y":15,"value":0,"name":"cavalier ~ renard"},{"x":1,"y":16,"value":1,"name":"cavalier ~ sangliers"},{"x":1,"y":17,"value":5,"name":"cavalier ~ vaches"},{"x":1,"y":18,"value":2,"name":"cavalier ~ vehicule"},{"x":2,"y":0,"value":0,"name":"cerf ~ blaireaux"},{"x":2,"y":1,"value":9,"name":"cerf ~ cavalier"},{"x":2,"y":2,"value":0,"name":"cerf ~ cerf"},{"x":2,"y":3,"value":0,"name":"cerf ~ chamois"},{"x":2,"y":4,"value":0,"name":"cerf ~ chasseur"},{"x":2,"y":5,"value":0,"name":"cerf ~ chat"},{"x":2,"y":6,"value":3,"name":"cerf ~ chevreuil"},{"x":2,"y":7,"value":0,"name":"cerf ~ chien"},{"x":2,"y":8,"value":0,"name":"cerf ~ ecureuil"},{"x":2,"y":9,"value":0,"name":"cerf ~ fouine"},{"x":2,"y":10,"value":0,"name":"cerf ~ humain"},{"x":2,"y":11,"value":0,"name":"cerf ~ lievre"},{"x":2,"y":12,"value":0,"name":"cerf ~ lynx"},{"x":2,"y":13,"value":0,"name":"cerf ~ martre"},{"x":2,"y":14,"value":0,"name":"cerf ~ oiseaux"},{"x":2,"y":15,"value":0,"name":"cerf ~ renard"},{"x":2,"y":16,"value":0,"name":"cerf ~ sangliers"},{"x":2,"y":17,"value":8,"name":"cerf ~ vaches"},{"x":2,"y":18,"value":0,"name":"cerf ~ vehicule"},{"x":3,"y":0,"value":20,"name":"chamois ~ blaireaux"},{"x":3,"y":1,"value":54,"name":"chamois ~ cavalier"},{"x":3,"y":2,"value":7,"name":"chamois ~ cerf"},{"x":3,"y":3,"value":59,"name":"chamois ~ chamois"},{"x":3,"y":4,"value":12,"name":"chamois ~ chasseur"},{"x":3,"y":5,"value":7,"name":"chamois ~ chat"},{"x":3,"y":6,"value":99,"name":"chamois ~ chevreuil"},{"x":3,"y":7,"value":44,"name":"chamois ~ chien"},{"x":3,"y":8,"value":0,"name":"chamois ~ ecureuil"},{"x":3,"y":9,"value":2,"name":"chamois ~ fouine"},{"x":3,"y":10,"value":365,"name":"chamois ~ humain"},{"x":3,"y":11,"value":4,"name":"chamois ~ lievre"},{"x":3,"y":12,"value":3,"name":"chamois ~ lynx"},{"x":3,"y":13,"value":0,"name":"chamois ~ martre"},{"x":3,"y":14,"value":1,"name":"chamois ~ oiseaux"},{"x":3,"y":15,"value":4,"name":"chamois ~ renard"},{"x":3,"y":16,"value":9,"name":"chamois ~ sangliers"},{"x":3,"y":17,"value":81,"name":"chamois ~ vaches"},{"x":3,"y":18,"value":9,"name":"chamois ~ vehicule"},{"x":4,"y":0,"value":0,"name":"chasseur ~ blaireaux"},{"x":4,"y":1,"value":1,"name":"chasseur ~ cavalier"},{"x":4,"y":2,"value":0,"name":"chasseur ~ cerf"},{"x":4,"y":3,"value":0,"name":"chasseur ~ chamois"},{"x":4,"y":4,"value":64,"name":"chasseur ~ chasseur"},{"x":4,"y":5,"value":0,"name":"chasseur ~ chat"},{"x":4,"y":6,"value":0,"name":"chasseur ~ chevreuil"},{"x":4,"y":7,"value":3,"name":"chasseur ~ chien"},{"x":4,"y":8,"value":0,"name":"chasseur ~ ecureuil"},{"x":4,"y":9,"value":0,"name":"chasseur ~ fouine"},{"x":4,"y":10,"value":524,"name":"chasseur ~ humain"},{"x":4,"y":11,"value":0,"name":"chasseur ~ lievre"},{"x":4,"y":12,"value":0,"name":"chasseur ~ lynx"},{"x":4,"y":13,"value":0,"name":"chasseur ~ martre"},{"x":4,"y":14,"value":0,"name":"chasseur ~ oiseaux"},{"x":4,"y":15,"value":0,"name":"chasseur ~ renard"},{"x":4,"y":16,"value":0,"name":"chasseur ~ sangliers"},{"x":4,"y":17,"value":0,"name":"chasseur ~ vaches"},{"x":4,"y":18,"value":1,"name":"chasseur ~ vehicule"},{"x":5,"y":0,"value":13,"name":"chat ~ blaireaux"},{"x":5,"y":1,"value":0,"name":"chat ~ cavalier"},{"x":5,"y":2,"value":0,"name":"chat ~ cerf"},{"x":5,"y":3,"value":0,"name":"chat ~ chamois"},{"x":5,"y":4,"value":0,"name":"chat ~ chasseur"},{"x":5,"y":5,"value":69,"name":"chat ~ chat"},{"x":5,"y":6,"value":2,"name":"chat ~ chevreuil"},{"x":5,"y":7,"value":1,"name":"chat ~ chien"},{"x":5,"y":8,"value":0,"name":"chat ~ ecureuil"},{"x":5,"y":9,"value":0,"name":"chat ~ fouine"},{"x":5,"y":10,"value":5,"name":"chat ~ humain"},{"x":5,"y":11,"value":2,"name":"chat ~ lievre"},{"x":5,"y":12,"value":14,"name":"chat ~ lynx"},{"x":5,"y":13,"value":0,"name":"chat ~ martre"},{"x":5,"y":14,"value":0,"name":"chat ~ oiseaux"},{"x":5,"y":15,"value":8,"name":"chat ~ renard"},{"x":5,"y":16,"value":3,"name":"chat ~ sangliers"},{"x":5,"y":17,"value":0,"name":"chat ~ vaches"},{"x":5,"y":18,"value":0,"name":"chat ~ vehicule"},{"x":6,"y":0,"value":0,"name":"chevreuil ~ blaireaux"},{"x":6,"y":1,"value":7,"name":"chevreuil ~ cavalier"},{"x":6,"y":2,"value":15,"name":"chevreuil ~ cerf"},{"x":6,"y":3,"value":4,"name":"chevreuil ~ chamois"},{"x":6,"y":4,"value":0,"name":"chevreuil ~ chasseur"},{"x":6,"y":5,"value":4,"name":"chevreuil ~ chat"},{"x":6,"y":6,"value":743,"name":"chevreuil ~ chevreuil"},{"x":6,"y":7,"value":14,"name":"chevreuil ~ chien"},{"x":6,"y":8,"value":0,"name":"chevreuil ~ ecureuil"},{"x":6,"y":9,"value":0,"name":"chevreuil ~ fouine"},{"x":6,"y":10,"value":19,"name":"chevreuil ~ humain"},{"x":6,"y":11,"value":11,"name":"chevreuil ~ lievre"},{"x":6,"y":12,"value":0,"name":"chevreuil ~ lynx"},{"x":6,"y":13,"value":0,"name":"chevreuil ~ martre"},{"x":6,"y":14,"value":1,"name":"chevreuil ~ oiseaux"},{"x":6,"y":15,"value":18,"name":"chevreuil ~ renard"},{"x":6,"y":16,"value":7,"name":"chevreuil ~ sangliers"},{"x":6,"y":17,"value":16,"name":"chevreuil ~ vaches"},{"x":6,"y":18,"value":1,"name":"chevreuil ~ vehicule"},{"x":7,"y":0,"value":4,"name":"chien ~ blaireaux"},{"x":7,"y":1,"value":96,"name":"chien ~ cavalier"},{"x":7,"y":2,"value":1,"name":"chien ~ cerf"},{"x":7,"y":3,"value":2,"name":"chien ~ chamois"},{"x":7,"y":4,"value":55,"name":"chien ~ chasseur"},{"x":7,"y":5,"value":8,"name":"chien ~ chat"},{"x":7,"y":6,"value":76,"name":"chien ~ chevreuil"},{"x":7,"y":7,"value":814,"name":"chien ~ chien"},{"x":7,"y":8,"value":2,"name":"chien ~ ecureuil"},{"x":7,"y":9,"value":0,"name":"chien ~ fouine"},{"x":7,"y":10,"value":1072,"name":"chien ~ humain"},{"x":7,"y":11,"value":9,"name":"chien ~ lievre"},{"x":7,"y":12,"value":5,"name":"chien ~ lynx"},{"x":7,"y":13,"value":3,"name":"chien ~ martre"},{"x":7,"y":14,"value":9,"name":"chien ~ oiseaux"},{"x":7,"y":15,"value":10,"name":"chien ~ renard"},{"x":7,"y":16,"value":44,"name":"chien ~ sangliers"},{"x":7,"y":17,"value":63,"name":"chien ~ vaches"},{"x":7,"y":18,"value":37,"name":"chien ~ vehicule"},{"x":8,"y":0,"value":5,"name":"humain ~ blaireaux"},{"x":8,"y":1,"value":20,"name":"humain ~ cavalier"},{"x":8,"y":2,"value":1,"name":"humain ~ cerf"},{"x":8,"y":3,"value":0,"name":"humain ~ chamois"},{"x":8,"y":4,"value":193,"name":"humain ~ chasseur"},{"x":8,"y":5,"value":3,"name":"humain ~ chat"},{"x":8,"y":6,"value":14,"name":"humain ~ chevreuil"},{"x":8,"y":7,"value":54,"name":"humain ~ chien"},{"x":8,"y":8,"value":0,"name":"humain ~ ecureuil"},{"x":8,"y":9,"value":0,"name":"humain ~ fouine"},{"x":8,"y":10,"value":4579,"name":"humain ~ humain"},{"x":8,"y":11,"value":4,"name":"humain ~ lievre"},{"x":8,"y":12,"value":0,"name":"humain ~ lynx"},{"x":8,"y":13,"value":0,"name":"humain ~ martre"},{"x":8,"y":14,"value":3,"name":"humain ~ oiseaux"},{"x":8,"y":15,"value":5,"name":"humain ~ renard"},{"x":8,"y":16,"value":5,"name":"humain ~ sangliers"},{"x":8,"y":17,"value":0,"name":"humain ~ vaches"},{"x":8,"y":18,"value":60,"name":"humain ~ vehicule"},{"x":9,"y":0,"value":23,"name":"lievre ~ blaireaux"},{"x":9,"y":1,"value":4,"name":"lievre ~ cavalier"},{"x":9,"y":2,"value":0,"name":"lievre ~ cerf"},{"x":9,"y":3,"value":1,"name":"lievre ~ chamois"},{"x":9,"y":4,"value":0,"name":"lievre ~ chasseur"},{"x":9,"y":5,"value":5,"name":"lievre ~ chat"},{"x":9,"y":6,"value":11,"name":"lievre ~ chevreuil"},{"x":9,"y":7,"value":2,"name":"lievre ~ chien"},{"x":9,"y":8,"value":0,"name":"lievre ~ ecureuil"},{"x":9,"y":9,"value":0,"name":"lievre ~ fouine"},{"x":9,"y":10,"value":13,"name":"lievre ~ humain"},{"x":9,"y":11,"value":59,"name":"lievre ~ lievre"},{"x":9,"y":12,"value":2,"name":"lievre ~ lynx"},{"x":9,"y":13,"value":1,"name":"lievre ~ martre"},{"x":9,"y":14,"value":0,"name":"lievre ~ oiseaux"},{"x":9,"y":15,"value":23,"name":"lievre ~ renard"},{"x":9,"y":16,"value":23,"name":"lievre ~ sangliers"},{"x":9,"y":17,"value":0,"name":"lievre ~ vaches"},{"x":9,"y":18,"value":0,"name":"lievre ~ vehicule"},{"x":10,"y":0,"value":1,"name":"lynx ~ blaireaux"},{"x":10,"y":1,"value":0,"name":"lynx ~ cavalier"},{"x":10,"y":2,"value":0,"name":"lynx ~ cerf"},{"x":10,"y":3,"value":0,"name":"lynx ~ chamois"},{"x":10,"y":4,"value":0,"name":"lynx ~ chasseur"},{"x":10,"y":5,"value":1,"name":"lynx ~ chat"},{"x":10,"y":6,"value":3,"name":"lynx ~ chevreuil"},{"x":10,"y":7,"value":1,"name":"lynx ~ chien"},{"x":10,"y":8,"value":0,"name":"lynx ~ ecureuil"},{"x":10,"y":9,"value":0,"name":"lynx ~ fouine"},{"x":10,"y":10,"value":8,"name":"lynx ~ humain"},{"x":10,"y":11,"value":0,"name":"lynx ~ lievre"},{"x":10,"y":12,"value":156,"name":"lynx ~ lynx"},{"x":10,"y":13,"value":0,"name":"lynx ~ martre"},{"x":10,"y":14,"value":0,"name":"lynx ~ oiseaux"},{"x":10,"y":15,"value":3,"name":"lynx ~ renard"},{"x":10,"y":16,"value":1,"name":"lynx ~ sangliers"},{"x":10,"y":17,"value":1,"name":"lynx ~ vaches"},{"x":10,"y":18,"value":0,"name":"lynx ~ vehicule"},{"x":11,"y":0,"value":19,"name":"martre ~ blaireaux"},{"x":11,"y":1,"value":0,"name":"martre ~ cavalier"},{"x":11,"y":2,"value":0,"name":"martre ~ cerf"},{"x":11,"y":3,"value":0,"name":"martre ~ chamois"},{"x":11,"y":4,"value":0,"name":"martre ~ chasseur"},{"x":11,"y":5,"value":0,"name":"martre ~ chat"},{"x":11,"y":6,"value":0,"name":"martre ~ chevreuil"},{"x":11,"y":7,"value":2,"name":"martre ~ chien"},{"x":11,"y":8,"value":0,"name":"martre ~ ecureuil"},{"x":11,"y":9,"value":1,"name":"martre ~ fouine"},{"x":11,"y":10,"value":0,"name":"martre ~ humain"},{"x":11,"y":11,"value":0,"name":"martre ~ lievre"},{"x":11,"y":12,"value":0,"name":"martre ~ lynx"},{"x":11,"y":13,"value":1,"name":"martre ~ martre"},{"x":11,"y":14,"value":0,"name":"martre ~ oiseaux"},{"x":11,"y":15,"value":4,"name":"martre ~ renard"},{"x":11,"y":16,"value":0,"name":"martre ~ sangliers"},{"x":11,"y":17,"value":0,"name":"martre ~ vaches"},{"x":11,"y":18,"value":0,"name":"martre ~ vehicule"},{"x":12,"y":0,"value":73,"name":"renard ~ blaireaux"},{"x":12,"y":1,"value":35,"name":"renard ~ cavalier"},{"x":12,"y":2,"value":1,"name":"renard ~ cerf"},{"x":12,"y":3,"value":2,"name":"renard ~ chamois"},{"x":12,"y":4,"value":4,"name":"renard ~ chasseur"},{"x":12,"y":5,"value":43,"name":"renard ~ chat"},{"x":12,"y":6,"value":117,"name":"renard ~ chevreuil"},{"x":12,"y":7,"value":84,"name":"renard ~ chien"},{"x":12,"y":8,"value":0,"name":"renard ~ ecureuil"},{"x":12,"y":9,"value":6,"name":"renard ~ fouine"},{"x":12,"y":10,"value":212,"name":"renard ~ humain"},{"x":12,"y":11,"value":62,"name":"renard ~ lievre"},{"x":12,"y":12,"value":22,"name":"renard ~ lynx"},{"x":12,"y":13,"value":11,"name":"renard ~ martre"},{"x":12,"y":14,"value":7,"name":"renard ~ oiseaux"},{"x":12,"y":15,"value":832,"name":"renard ~ renard"},{"x":12,"y":16,"value":49,"name":"renard ~ sangliers"},{"x":12,"y":17,"value":1,"name":"renard ~ vaches"},{"x":12,"y":18,"value":26,"name":"renard ~ vehicule"},{"x":13,"y":0,"value":11,"name":"sangliers ~ blaireaux"},{"x":13,"y":1,"value":0,"name":"sangliers ~ cavalier"},{"x":13,"y":2,"value":0,"name":"sangliers ~ cerf"},{"x":13,"y":3,"value":2,"name":"sangliers ~ chamois"},{"x":13,"y":4,"value":0,"name":"sangliers ~ chasseur"},{"x":13,"y":5,"value":3,"name":"sangliers ~ chat"},{"x":13,"y":6,"value":8,"name":"sangliers ~ chevreuil"},{"x":13,"y":7,"value":3,"name":"sangliers ~ chien"},{"x":13,"y":8,"value":0,"name":"sangliers ~ ecureuil"},{"x":13,"y":9,"value":0,"name":"sangliers ~ fouine"},{"x":13,"y":10,"value":1,"name":"sangliers ~ humain"},{"x":13,"y":11,"value":0,"name":"sangliers ~ lievre"},{"x":13,"y":12,"value":0,"name":"sangliers ~ lynx"},{"x":13,"y":13,"value":0,"name":"sangliers ~ martre"},{"x":13,"y":14,"value":0,"name":"sangliers ~ oiseaux"},{"x":13,"y":15,"value":0,"name":"sangliers ~ renard"},{"x":13,"y":16,"value":483,"name":"sangliers ~ sangliers"},{"x":13,"y":17,"value":3,"name":"sangliers ~ vaches"},{"x":13,"y":18,"value":0,"name":"sangliers ~ vehicule"},{"x":14,"y":0,"value":0,"name":"vaches ~ blaireaux"},{"x":14,"y":1,"value":5,"name":"vaches ~ cavalier"},{"x":14,"y":2,"value":0,"name":"vaches ~ cerf"},{"x":14,"y":3,"value":0,"name":"vaches ~ chamois"},{"x":14,"y":4,"value":0,"name":"vaches ~ chasseur"},{"x":14,"y":5,"value":0,"name":"vaches ~ chat"},{"x":14,"y":6,"value":0,"name":"vaches ~ chevreuil"},{"x":14,"y":7,"value":1,"name":"vaches ~ chien"},{"x":14,"y":8,"value":0,"name":"vaches ~ ecureuil"},{"x":14,"y":9,"value":0,"name":"vaches ~ fouine"},{"x":14,"y":10,"value":0,"name":"vaches ~ humain"},{"x":14,"y":11,"value":0,"name":"vaches ~ lievre"},{"x":14,"y":12,"value":0,"name":"vaches ~ lynx"},{"x":14,"y":13,"value":0,"name":"vaches ~ martre"},{"x":14,"y":14,"value":0,"name":"vaches ~ oiseaux"},{"x":14,"y":15,"value":0,"name":"vaches ~ renard"},{"x":14,"y":16,"value":0,"name":"vaches ~ sangliers"},{"x":14,"y":17,"value":2,"name":"vaches ~ vaches"},{"x":14,"y":18,"value":0,"name":"vaches ~ vehicule"},{"x":15,"y":0,"value":0,"name":"vehicule ~ blaireaux"},{"x":15,"y":1,"value":26,"name":"vehicule ~ cavalier"},{"x":15,"y":2,"value":0,"name":"vehicule ~ cerf"},{"x":15,"y":3,"value":0,"name":"vehicule ~ chamois"},{"x":15,"y":4,"value":40,"name":"vehicule ~ chasseur"},{"x":15,"y":5,"value":3,"name":"vehicule ~ chat"},{"x":15,"y":6,"value":21,"name":"vehicule ~ chevreuil"},{"x":15,"y":7,"value":33,"name":"vehicule ~ chien"},{"x":15,"y":8,"value":1,"name":"vehicule ~ ecureuil"},{"x":15,"y":9,"value":0,"name":"vehicule ~ fouine"},{"x":15,"y":10,"value":2054,"name":"vehicule ~ humain"},{"x":15,"y":11,"value":8,"name":"vehicule ~ lievre"},{"x":15,"y":12,"value":1,"name":"vehicule ~ lynx"},{"x":15,"y":13,"value":1,"name":"vehicule ~ martre"},{"x":15,"y":14,"value":4,"name":"vehicule ~ oiseaux"},{"x":15,"y":15,"value":6,"name":"vehicule ~ renard"},{"x":15,"y":16,"value":0,"name":"vehicule ~ sangliers"},{"x":15,"y":17,"value":4,"name":"vehicule ~ vaches"},{"x":15,"y":18,"value":2252,"name":"vehicule ~ vehicule"}],"type":"heatmap"}],"tooltip":{"formatter":"function(){\n                 return this.point.name + ': ' +\n                   Highcharts.numberFormat(this.point.value, 2)\n               }"},"legend":{"enabled":true},"colorAxis":{"auxarg":true},"xAxis":{"categories":["blaireaux","cavalier","cerf","chamois","chasseur","chat","chevreuil","chien","humain","lievre","lynx","martre","renard","sangliers","vaches","vehicule"],"title":{"text":"Predicted"},"opposite":true,"labels":{"rotation":-90}}},"theme":{"colors":["#FFFFFF","#D8D7D6","#B2B0AD","#8C8984"],"chart":{"divBackgroundImage":"https://www.amcharts.com/inspiration/chalk/bg.jpg","backgroundColor":"transparent","style":{"fontFamily":"Shadows Into Light","color":"#FFFFFF"}},"plotOptions":{"scatter":{"marker":{"radius":10}}},"title":{"style":{"fontSize":"30px","color":"#FFFFFF"}},"subtitle":{"style":{"fontSize":"20px","color":"#FFFFFF"}},"legend":{"enabled":true,"itemStyle":{"fontSize":"20px","color":"#FFFFFF"}},"credits":{"enabled":false},"xAxis":{"lineWidth":1,"tickWidth":1,"gridLineColor":"transparent","labels":{"enabled":true,"style":{"color":"#FFFFFF","fontSize":"20px"}},"title":{"enabled":true,"style":{"color":"#FFFFFF","fontSize":"20px"}}},"yAxis":{"lineWidth":1,"tickWidth":1,"gridLineColor":"transparent","labels":{"enabled":true,"style":{"color":"#FFFFFF","fontSize":"20px"}},"title":{"enabled":true,"style":{"color":"#FFFFFF","fontSize":"20px"}}},"tooltip":{"backgroundColor":"#333333","style":{"color":"#FFFFFF","fontSize":"20px","padding":"10px"}}},"conf_opts":{"global":{"Date":null,"VMLRadialGradientURL":"http =//code.highcharts.com/list(version)/gfx/vml-radial-gradient.png","canvasToolsURL":"http =//code.highcharts.com/list(version)/modules/canvas-tools.js","getTimezoneOffset":null,"timezoneOffset":0,"useUTC":true},"lang":{"contextButtonTitle":"Chart context menu","decimalPoint":".","downloadJPEG":"Download JPEG image","downloadPDF":"Download PDF document","downloadPNG":"Download PNG image","downloadSVG":"Download SVG vector image","drillUpText":"Back to {series.name}","invalidDate":null,"loading":"Loading...","months":["January","February","March","April","May","June","July","August","September","October","November","December"],"noData":"No data to display","numericSymbols":["k","M","G","T","P","E"],"printChart":"Print chart","resetZoom":"Reset zoom","resetZoomTitle":"Reset zoom level 1:1","shortMonths":["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"thousandsSep":" ","weekdays":["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"]}},"type":"chart","fonts":"Shadows+Into+Light","debug":false},"evals":["hc_opts.tooltip.formatter"],"jsHooks":[]}</script>
+<div id="htmlwidget-d8c2f3d31354d66f5c26" style="width:100%;height:500px;" class="highchart html-widget"></div>
+<script type="application/json" data-for="htmlwidget-d8c2f3d31354d66f5c26">{"x":{"hc_opts":{"chart":{"reflow":true},"title":{"text":null},"yAxis":{"title":{"text":"Actual"},"categories":["blaireaux","cavalier","cerf","chamois","chasseur","chat","chevreuil","chien","ecureuil","fouine","humain","lievre","lynx","martre","oiseaux","renard","sangliers","vaches","vehicule"],"reversed":true},"credits":{"enabled":false},"exporting":{"enabled":false},"boost":{"enabled":false},"plotOptions":{"series":{"label":{"enabled":false},"turboThreshold":0,"showInLegend":false,"boderWidth":0,"dataLabels":{"enabled":true}},"treemap":{"layoutAlgorithm":"squarified"}},"series":[{"data":[{"x":0,"y":0,"value":408,"name":"blaireaux ~ blaireaux"},{"x":0,"y":1,"value":2,"name":"blaireaux ~ cavalier"},{"x":0,"y":2,"value":0,"name":"blaireaux ~ cerf"},{"x":0,"y":3,"value":2,"name":"blaireaux ~ chamois"},{"x":0,"y":4,"value":0,"name":"blaireaux ~ chasseur"},{"x":0,"y":5,"value":3,"name":"blaireaux ~ chat"},{"x":0,"y":6,"value":3,"name":"blaireaux ~ chevreuil"},{"x":0,"y":7,"value":0,"name":"blaireaux ~ chien"},{"x":0,"y":8,"value":0,"name":"blaireaux ~ ecureuil"},{"x":0,"y":9,"value":0,"name":"blaireaux ~ fouine"},{"x":0,"y":10,"value":11,"name":"blaireaux ~ humain"},{"x":0,"y":11,"value":1,"name":"blaireaux ~ lievre"},{"x":0,"y":12,"value":0,"name":"blaireaux ~ lynx"},{"x":0,"y":13,"value":2,"name":"blaireaux ~ martre"},{"x":0,"y":14,"value":0,"name":"blaireaux ~ oiseaux"},{"x":0,"y":15,"value":9,"name":"blaireaux ~ renard"},{"x":0,"y":16,"value":18,"name":"blaireaux ~ sangliers"},{"x":0,"y":17,"value":0,"name":"blaireaux ~ vaches"},{"x":0,"y":18,"value":2,"name":"blaireaux ~ vehicule"},{"x":1,"y":0,"value":0,"name":"cavalier ~ blaireaux"},{"x":1,"y":1,"value":947,"name":"cavalier ~ cavalier"},{"x":1,"y":2,"value":0,"name":"cavalier ~ cerf"},{"x":1,"y":3,"value":0,"name":"cavalier ~ chamois"},{"x":1,"y":4,"value":0,"name":"cavalier ~ chasseur"},{"x":1,"y":5,"value":0,"name":"cavalier ~ chat"},{"x":1,"y":6,"value":1,"name":"cavalier ~ chevreuil"},{"x":1,"y":7,"value":1,"name":"cavalier ~ chien"},{"x":1,"y":8,"value":0,"name":"cavalier ~ ecureuil"},{"x":1,"y":9,"value":0,"name":"cavalier ~ fouine"},{"x":1,"y":10,"value":68,"name":"cavalier ~ humain"},{"x":1,"y":11,"value":0,"name":"cavalier ~ lievre"},{"x":1,"y":12,"value":0,"name":"cavalier ~ lynx"},{"x":1,"y":13,"value":0,"name":"cavalier ~ martre"},{"x":1,"y":14,"value":0,"name":"cavalier ~ oiseaux"},{"x":1,"y":15,"value":0,"name":"cavalier ~ renard"},{"x":1,"y":16,"value":1,"name":"cavalier ~ sangliers"},{"x":1,"y":17,"value":5,"name":"cavalier ~ vaches"},{"x":1,"y":18,"value":2,"name":"cavalier ~ vehicule"},{"x":2,"y":0,"value":0,"name":"cerf ~ blaireaux"},{"x":2,"y":1,"value":9,"name":"cerf ~ cavalier"},{"x":2,"y":2,"value":0,"name":"cerf ~ cerf"},{"x":2,"y":3,"value":0,"name":"cerf ~ chamois"},{"x":2,"y":4,"value":0,"name":"cerf ~ chasseur"},{"x":2,"y":5,"value":0,"name":"cerf ~ chat"},{"x":2,"y":6,"value":3,"name":"cerf ~ chevreuil"},{"x":2,"y":7,"value":0,"name":"cerf ~ chien"},{"x":2,"y":8,"value":0,"name":"cerf ~ ecureuil"},{"x":2,"y":9,"value":0,"name":"cerf ~ fouine"},{"x":2,"y":10,"value":0,"name":"cerf ~ humain"},{"x":2,"y":11,"value":0,"name":"cerf ~ lievre"},{"x":2,"y":12,"value":0,"name":"cerf ~ lynx"},{"x":2,"y":13,"value":0,"name":"cerf ~ martre"},{"x":2,"y":14,"value":0,"name":"cerf ~ oiseaux"},{"x":2,"y":15,"value":0,"name":"cerf ~ renard"},{"x":2,"y":16,"value":0,"name":"cerf ~ sangliers"},{"x":2,"y":17,"value":8,"name":"cerf ~ vaches"},{"x":2,"y":18,"value":0,"name":"cerf ~ vehicule"},{"x":3,"y":0,"value":20,"name":"chamois ~ blaireaux"},{"x":3,"y":1,"value":54,"name":"chamois ~ cavalier"},{"x":3,"y":2,"value":7,"name":"chamois ~ cerf"},{"x":3,"y":3,"value":59,"name":"chamois ~ chamois"},{"x":3,"y":4,"value":12,"name":"chamois ~ chasseur"},{"x":3,"y":5,"value":7,"name":"chamois ~ chat"},{"x":3,"y":6,"value":99,"name":"chamois ~ chevreuil"},{"x":3,"y":7,"value":44,"name":"chamois ~ chien"},{"x":3,"y":8,"value":0,"name":"chamois ~ ecureuil"},{"x":3,"y":9,"value":2,"name":"chamois ~ fouine"},{"x":3,"y":10,"value":365,"name":"chamois ~ humain"},{"x":3,"y":11,"value":4,"name":"chamois ~ lievre"},{"x":3,"y":12,"value":3,"name":"chamois ~ lynx"},{"x":3,"y":13,"value":0,"name":"chamois ~ martre"},{"x":3,"y":14,"value":1,"name":"chamois ~ oiseaux"},{"x":3,"y":15,"value":4,"name":"chamois ~ renard"},{"x":3,"y":16,"value":9,"name":"chamois ~ sangliers"},{"x":3,"y":17,"value":81,"name":"chamois ~ vaches"},{"x":3,"y":18,"value":9,"name":"chamois ~ vehicule"},{"x":4,"y":0,"value":0,"name":"chasseur ~ blaireaux"},{"x":4,"y":1,"value":1,"name":"chasseur ~ cavalier"},{"x":4,"y":2,"value":0,"name":"chasseur ~ cerf"},{"x":4,"y":3,"value":0,"name":"chasseur ~ chamois"},{"x":4,"y":4,"value":64,"name":"chasseur ~ chasseur"},{"x":4,"y":5,"value":0,"name":"chasseur ~ chat"},{"x":4,"y":6,"value":0,"name":"chasseur ~ chevreuil"},{"x":4,"y":7,"value":3,"name":"chasseur ~ chien"},{"x":4,"y":8,"value":0,"name":"chasseur ~ ecureuil"},{"x":4,"y":9,"value":0,"name":"chasseur ~ fouine"},{"x":4,"y":10,"value":524,"name":"chasseur ~ humain"},{"x":4,"y":11,"value":0,"name":"chasseur ~ lievre"},{"x":4,"y":12,"value":0,"name":"chasseur ~ lynx"},{"x":4,"y":13,"value":0,"name":"chasseur ~ martre"},{"x":4,"y":14,"value":0,"name":"chasseur ~ oiseaux"},{"x":4,"y":15,"value":0,"name":"chasseur ~ renard"},{"x":4,"y":16,"value":0,"name":"chasseur ~ sangliers"},{"x":4,"y":17,"value":0,"name":"chasseur ~ vaches"},{"x":4,"y":18,"value":1,"name":"chasseur ~ vehicule"},{"x":5,"y":0,"value":13,"name":"chat ~ blaireaux"},{"x":5,"y":1,"value":0,"name":"chat ~ cavalier"},{"x":5,"y":2,"value":0,"name":"chat ~ cerf"},{"x":5,"y":3,"value":0,"name":"chat ~ chamois"},{"x":5,"y":4,"value":0,"name":"chat ~ chasseur"},{"x":5,"y":5,"value":69,"name":"chat ~ chat"},{"x":5,"y":6,"value":2,"name":"chat ~ chevreuil"},{"x":5,"y":7,"value":1,"name":"chat ~ chien"},{"x":5,"y":8,"value":0,"name":"chat ~ ecureuil"},{"x":5,"y":9,"value":0,"name":"chat ~ fouine"},{"x":5,"y":10,"value":5,"name":"chat ~ humain"},{"x":5,"y":11,"value":2,"name":"chat ~ lievre"},{"x":5,"y":12,"value":14,"name":"chat ~ lynx"},{"x":5,"y":13,"value":0,"name":"chat ~ martre"},{"x":5,"y":14,"value":0,"name":"chat ~ oiseaux"},{"x":5,"y":15,"value":8,"name":"chat ~ renard"},{"x":5,"y":16,"value":3,"name":"chat ~ sangliers"},{"x":5,"y":17,"value":0,"name":"chat ~ vaches"},{"x":5,"y":18,"value":0,"name":"chat ~ vehicule"},{"x":6,"y":0,"value":0,"name":"chevreuil ~ blaireaux"},{"x":6,"y":1,"value":7,"name":"chevreuil ~ cavalier"},{"x":6,"y":2,"value":15,"name":"chevreuil ~ cerf"},{"x":6,"y":3,"value":4,"name":"chevreuil ~ chamois"},{"x":6,"y":4,"value":0,"name":"chevreuil ~ chasseur"},{"x":6,"y":5,"value":4,"name":"chevreuil ~ chat"},{"x":6,"y":6,"value":743,"name":"chevreuil ~ chevreuil"},{"x":6,"y":7,"value":14,"name":"chevreuil ~ chien"},{"x":6,"y":8,"value":0,"name":"chevreuil ~ ecureuil"},{"x":6,"y":9,"value":0,"name":"chevreuil ~ fouine"},{"x":6,"y":10,"value":19,"name":"chevreuil ~ humain"},{"x":6,"y":11,"value":11,"name":"chevreuil ~ lievre"},{"x":6,"y":12,"value":0,"name":"chevreuil ~ lynx"},{"x":6,"y":13,"value":0,"name":"chevreuil ~ martre"},{"x":6,"y":14,"value":1,"name":"chevreuil ~ oiseaux"},{"x":6,"y":15,"value":18,"name":"chevreuil ~ renard"},{"x":6,"y":16,"value":7,"name":"chevreuil ~ sangliers"},{"x":6,"y":17,"value":16,"name":"chevreuil ~ vaches"},{"x":6,"y":18,"value":1,"name":"chevreuil ~ vehicule"},{"x":7,"y":0,"value":4,"name":"chien ~ blaireaux"},{"x":7,"y":1,"value":96,"name":"chien ~ cavalier"},{"x":7,"y":2,"value":1,"name":"chien ~ cerf"},{"x":7,"y":3,"value":2,"name":"chien ~ chamois"},{"x":7,"y":4,"value":55,"name":"chien ~ chasseur"},{"x":7,"y":5,"value":8,"name":"chien ~ chat"},{"x":7,"y":6,"value":76,"name":"chien ~ chevreuil"},{"x":7,"y":7,"value":814,"name":"chien ~ chien"},{"x":7,"y":8,"value":2,"name":"chien ~ ecureuil"},{"x":7,"y":9,"value":0,"name":"chien ~ fouine"},{"x":7,"y":10,"value":1072,"name":"chien ~ humain"},{"x":7,"y":11,"value":9,"name":"chien ~ lievre"},{"x":7,"y":12,"value":5,"name":"chien ~ lynx"},{"x":7,"y":13,"value":3,"name":"chien ~ martre"},{"x":7,"y":14,"value":9,"name":"chien ~ oiseaux"},{"x":7,"y":15,"value":10,"name":"chien ~ renard"},{"x":7,"y":16,"value":44,"name":"chien ~ sangliers"},{"x":7,"y":17,"value":63,"name":"chien ~ vaches"},{"x":7,"y":18,"value":37,"name":"chien ~ vehicule"},{"x":8,"y":0,"value":5,"name":"humain ~ blaireaux"},{"x":8,"y":1,"value":20,"name":"humain ~ cavalier"},{"x":8,"y":2,"value":1,"name":"humain ~ cerf"},{"x":8,"y":3,"value":0,"name":"humain ~ chamois"},{"x":8,"y":4,"value":193,"name":"humain ~ chasseur"},{"x":8,"y":5,"value":3,"name":"humain ~ chat"},{"x":8,"y":6,"value":14,"name":"humain ~ chevreuil"},{"x":8,"y":7,"value":54,"name":"humain ~ chien"},{"x":8,"y":8,"value":0,"name":"humain ~ ecureuil"},{"x":8,"y":9,"value":0,"name":"humain ~ fouine"},{"x":8,"y":10,"value":4579,"name":"humain ~ humain"},{"x":8,"y":11,"value":4,"name":"humain ~ lievre"},{"x":8,"y":12,"value":0,"name":"humain ~ lynx"},{"x":8,"y":13,"value":0,"name":"humain ~ martre"},{"x":8,"y":14,"value":3,"name":"humain ~ oiseaux"},{"x":8,"y":15,"value":5,"name":"humain ~ renard"},{"x":8,"y":16,"value":5,"name":"humain ~ sangliers"},{"x":8,"y":17,"value":0,"name":"humain ~ vaches"},{"x":8,"y":18,"value":60,"name":"humain ~ vehicule"},{"x":9,"y":0,"value":23,"name":"lievre ~ blaireaux"},{"x":9,"y":1,"value":4,"name":"lievre ~ cavalier"},{"x":9,"y":2,"value":0,"name":"lievre ~ cerf"},{"x":9,"y":3,"value":1,"name":"lievre ~ chamois"},{"x":9,"y":4,"value":0,"name":"lievre ~ chasseur"},{"x":9,"y":5,"value":5,"name":"lievre ~ chat"},{"x":9,"y":6,"value":11,"name":"lievre ~ chevreuil"},{"x":9,"y":7,"value":2,"name":"lievre ~ chien"},{"x":9,"y":8,"value":0,"name":"lievre ~ ecureuil"},{"x":9,"y":9,"value":0,"name":"lievre ~ fouine"},{"x":9,"y":10,"value":13,"name":"lievre ~ humain"},{"x":9,"y":11,"value":59,"name":"lievre ~ lievre"},{"x":9,"y":12,"value":2,"name":"lievre ~ lynx"},{"x":9,"y":13,"value":1,"name":"lievre ~ martre"},{"x":9,"y":14,"value":0,"name":"lievre ~ oiseaux"},{"x":9,"y":15,"value":23,"name":"lievre ~ renard"},{"x":9,"y":16,"value":23,"name":"lievre ~ sangliers"},{"x":9,"y":17,"value":0,"name":"lievre ~ vaches"},{"x":9,"y":18,"value":0,"name":"lievre ~ vehicule"},{"x":10,"y":0,"value":1,"name":"lynx ~ blaireaux"},{"x":10,"y":1,"value":0,"name":"lynx ~ cavalier"},{"x":10,"y":2,"value":0,"name":"lynx ~ cerf"},{"x":10,"y":3,"value":0,"name":"lynx ~ chamois"},{"x":10,"y":4,"value":0,"name":"lynx ~ chasseur"},{"x":10,"y":5,"value":1,"name":"lynx ~ chat"},{"x":10,"y":6,"value":3,"name":"lynx ~ chevreuil"},{"x":10,"y":7,"value":1,"name":"lynx ~ chien"},{"x":10,"y":8,"value":0,"name":"lynx ~ ecureuil"},{"x":10,"y":9,"value":0,"name":"lynx ~ fouine"},{"x":10,"y":10,"value":8,"name":"lynx ~ humain"},{"x":10,"y":11,"value":0,"name":"lynx ~ lievre"},{"x":10,"y":12,"value":156,"name":"lynx ~ lynx"},{"x":10,"y":13,"value":0,"name":"lynx ~ martre"},{"x":10,"y":14,"value":0,"name":"lynx ~ oiseaux"},{"x":10,"y":15,"value":3,"name":"lynx ~ renard"},{"x":10,"y":16,"value":1,"name":"lynx ~ sangliers"},{"x":10,"y":17,"value":1,"name":"lynx ~ vaches"},{"x":10,"y":18,"value":0,"name":"lynx ~ vehicule"},{"x":11,"y":0,"value":19,"name":"martre ~ blaireaux"},{"x":11,"y":1,"value":0,"name":"martre ~ cavalier"},{"x":11,"y":2,"value":0,"name":"martre ~ cerf"},{"x":11,"y":3,"value":0,"name":"martre ~ chamois"},{"x":11,"y":4,"value":0,"name":"martre ~ chasseur"},{"x":11,"y":5,"value":0,"name":"martre ~ chat"},{"x":11,"y":6,"value":0,"name":"martre ~ chevreuil"},{"x":11,"y":7,"value":2,"name":"martre ~ chien"},{"x":11,"y":8,"value":0,"name":"martre ~ ecureuil"},{"x":11,"y":9,"value":1,"name":"martre ~ fouine"},{"x":11,"y":10,"value":0,"name":"martre ~ humain"},{"x":11,"y":11,"value":0,"name":"martre ~ lievre"},{"x":11,"y":12,"value":0,"name":"martre ~ lynx"},{"x":11,"y":13,"value":1,"name":"martre ~ martre"},{"x":11,"y":14,"value":0,"name":"martre ~ oiseaux"},{"x":11,"y":15,"value":4,"name":"martre ~ renard"},{"x":11,"y":16,"value":0,"name":"martre ~ sangliers"},{"x":11,"y":17,"value":0,"name":"martre ~ vaches"},{"x":11,"y":18,"value":0,"name":"martre ~ vehicule"},{"x":12,"y":0,"value":73,"name":"renard ~ blaireaux"},{"x":12,"y":1,"value":35,"name":"renard ~ cavalier"},{"x":12,"y":2,"value":1,"name":"renard ~ cerf"},{"x":12,"y":3,"value":2,"name":"renard ~ chamois"},{"x":12,"y":4,"value":4,"name":"renard ~ chasseur"},{"x":12,"y":5,"value":43,"name":"renard ~ chat"},{"x":12,"y":6,"value":117,"name":"renard ~ chevreuil"},{"x":12,"y":7,"value":84,"name":"renard ~ chien"},{"x":12,"y":8,"value":0,"name":"renard ~ ecureuil"},{"x":12,"y":9,"value":6,"name":"renard ~ fouine"},{"x":12,"y":10,"value":212,"name":"renard ~ humain"},{"x":12,"y":11,"value":62,"name":"renard ~ lievre"},{"x":12,"y":12,"value":22,"name":"renard ~ lynx"},{"x":12,"y":13,"value":11,"name":"renard ~ martre"},{"x":12,"y":14,"value":7,"name":"renard ~ oiseaux"},{"x":12,"y":15,"value":832,"name":"renard ~ renard"},{"x":12,"y":16,"value":49,"name":"renard ~ sangliers"},{"x":12,"y":17,"value":1,"name":"renard ~ vaches"},{"x":12,"y":18,"value":26,"name":"renard ~ vehicule"},{"x":13,"y":0,"value":11,"name":"sangliers ~ blaireaux"},{"x":13,"y":1,"value":0,"name":"sangliers ~ cavalier"},{"x":13,"y":2,"value":0,"name":"sangliers ~ cerf"},{"x":13,"y":3,"value":2,"name":"sangliers ~ chamois"},{"x":13,"y":4,"value":0,"name":"sangliers ~ chasseur"},{"x":13,"y":5,"value":3,"name":"sangliers ~ chat"},{"x":13,"y":6,"value":8,"name":"sangliers ~ chevreuil"},{"x":13,"y":7,"value":3,"name":"sangliers ~ chien"},{"x":13,"y":8,"value":0,"name":"sangliers ~ ecureuil"},{"x":13,"y":9,"value":0,"name":"sangliers ~ fouine"},{"x":13,"y":10,"value":1,"name":"sangliers ~ humain"},{"x":13,"y":11,"value":0,"name":"sangliers ~ lievre"},{"x":13,"y":12,"value":0,"name":"sangliers ~ lynx"},{"x":13,"y":13,"value":0,"name":"sangliers ~ martre"},{"x":13,"y":14,"value":0,"name":"sangliers ~ oiseaux"},{"x":13,"y":15,"value":0,"name":"sangliers ~ renard"},{"x":13,"y":16,"value":483,"name":"sangliers ~ sangliers"},{"x":13,"y":17,"value":3,"name":"sangliers ~ vaches"},{"x":13,"y":18,"value":0,"name":"sangliers ~ vehicule"},{"x":14,"y":0,"value":0,"name":"vaches ~ blaireaux"},{"x":14,"y":1,"value":5,"name":"vaches ~ cavalier"},{"x":14,"y":2,"value":0,"name":"vaches ~ cerf"},{"x":14,"y":3,"value":0,"name":"vaches ~ chamois"},{"x":14,"y":4,"value":0,"name":"vaches ~ chasseur"},{"x":14,"y":5,"value":0,"name":"vaches ~ chat"},{"x":14,"y":6,"value":0,"name":"vaches ~ chevreuil"},{"x":14,"y":7,"value":1,"name":"vaches ~ chien"},{"x":14,"y":8,"value":0,"name":"vaches ~ ecureuil"},{"x":14,"y":9,"value":0,"name":"vaches ~ fouine"},{"x":14,"y":10,"value":0,"name":"vaches ~ humain"},{"x":14,"y":11,"value":0,"name":"vaches ~ lievre"},{"x":14,"y":12,"value":0,"name":"vaches ~ lynx"},{"x":14,"y":13,"value":0,"name":"vaches ~ martre"},{"x":14,"y":14,"value":0,"name":"vaches ~ oiseaux"},{"x":14,"y":15,"value":0,"name":"vaches ~ renard"},{"x":14,"y":16,"value":0,"name":"vaches ~ sangliers"},{"x":14,"y":17,"value":2,"name":"vaches ~ vaches"},{"x":14,"y":18,"value":0,"name":"vaches ~ vehicule"},{"x":15,"y":0,"value":0,"name":"vehicule ~ blaireaux"},{"x":15,"y":1,"value":26,"name":"vehicule ~ cavalier"},{"x":15,"y":2,"value":0,"name":"vehicule ~ cerf"},{"x":15,"y":3,"value":0,"name":"vehicule ~ chamois"},{"x":15,"y":4,"value":40,"name":"vehicule ~ chasseur"},{"x":15,"y":5,"value":3,"name":"vehicule ~ chat"},{"x":15,"y":6,"value":21,"name":"vehicule ~ chevreuil"},{"x":15,"y":7,"value":33,"name":"vehicule ~ chien"},{"x":15,"y":8,"value":1,"name":"vehicule ~ ecureuil"},{"x":15,"y":9,"value":0,"name":"vehicule ~ fouine"},{"x":15,"y":10,"value":2054,"name":"vehicule ~ humain"},{"x":15,"y":11,"value":8,"name":"vehicule ~ lievre"},{"x":15,"y":12,"value":1,"name":"vehicule ~ lynx"},{"x":15,"y":13,"value":1,"name":"vehicule ~ martre"},{"x":15,"y":14,"value":4,"name":"vehicule ~ oiseaux"},{"x":15,"y":15,"value":6,"name":"vehicule ~ renard"},{"x":15,"y":16,"value":0,"name":"vehicule ~ sangliers"},{"x":15,"y":17,"value":4,"name":"vehicule ~ vaches"},{"x":15,"y":18,"value":2252,"name":"vehicule ~ vehicule"}],"type":"heatmap"}],"tooltip":{"formatter":"function(){\n                 return this.point.name + ': ' +\n                   Highcharts.numberFormat(this.point.value, 2)\n               }"},"legend":{"enabled":true},"colorAxis":{"auxarg":true},"xAxis":{"categories":["blaireaux","cavalier","cerf","chamois","chasseur","chat","chevreuil","chien","humain","lievre","lynx","martre","renard","sangliers","vaches","vehicule"],"title":{"text":"Predicted"},"opposite":true,"labels":{"rotation":-90}}},"theme":{"colors":["#FFFFFF","#D8D7D6","#B2B0AD","#8C8984"],"chart":{"divBackgroundImage":"https://www.amcharts.com/inspiration/chalk/bg.jpg","backgroundColor":"transparent","style":{"fontFamily":"Shadows Into Light","color":"#FFFFFF"}},"plotOptions":{"scatter":{"marker":{"radius":10}}},"title":{"style":{"fontSize":"30px","color":"#FFFFFF"}},"subtitle":{"style":{"fontSize":"20px","color":"#FFFFFF"}},"legend":{"enabled":true,"itemStyle":{"fontSize":"20px","color":"#FFFFFF"}},"credits":{"enabled":false},"xAxis":{"lineWidth":1,"tickWidth":1,"gridLineColor":"transparent","labels":{"enabled":true,"style":{"color":"#FFFFFF","fontSize":"20px"}},"title":{"enabled":true,"style":{"color":"#FFFFFF","fontSize":"20px"}}},"yAxis":{"lineWidth":1,"tickWidth":1,"gridLineColor":"transparent","labels":{"enabled":true,"style":{"color":"#FFFFFF","fontSize":"20px"}},"title":{"enabled":true,"style":{"color":"#FFFFFF","fontSize":"20px"}}},"tooltip":{"backgroundColor":"#333333","style":{"color":"#FFFFFF","fontSize":"20px","padding":"10px"}}},"conf_opts":{"global":{"Date":null,"VMLRadialGradientURL":"http =//code.highcharts.com/list(version)/gfx/vml-radial-gradient.png","canvasToolsURL":"http =//code.highcharts.com/list(version)/modules/canvas-tools.js","getTimezoneOffset":null,"timezoneOffset":0,"useUTC":true},"lang":{"contextButtonTitle":"Chart context menu","decimalPoint":".","downloadJPEG":"Download JPEG image","downloadPDF":"Download PDF document","downloadPNG":"Download PNG image","downloadSVG":"Download SVG vector image","drillUpText":"Back to {series.name}","invalidDate":null,"loading":"Loading...","months":["January","February","March","April","May","June","July","August","September","October","November","December"],"noData":"No data to display","numericSymbols":["k","M","G","T","P","E"],"printChart":"Print chart","resetZoom":"Reset zoom","resetZoomTitle":"Reset zoom level 1:1","shortMonths":["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"thousandsSep":" ","weekdays":["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"]}},"type":"chart","fonts":"Shadows+Into+Light","debug":false},"evals":["hc_opts.tooltip.formatter"],"jsHooks":[]}</script>
 
 ???
 
-+ Les résultats peuvent être représentés sous la forme d'une matrice de confusion, avec les espèces qui sont prédites par l'algorithme en colonnes, et les espèces qui se trouvent effectivement sur les photos en lignes.  
++ The results are best displayed with a confusion matrix, with species that are predicted by the algo in columns, and the species that are actually in the pictures in rows. 
 
-+ On se concentre sur le lynx et on dissèque les faux positifs et faux négatifs.  
++ Let us focus on lynx.  
 
-+ Un faux négatif est par exemple une photo sur laquelle on a un lynx mais on prédit une autre espèce. Un faux positif est une photo sur laquelle on n'a pas de lynx mais on prédit qu'il y en a un. 
++ A false negative is for example a picture with a lynx but we predict another species on it. A false positive is a picture without any lynx but we predict that there is a lynx on it. 
 
-+ On commence avec les faux négatifs, en ligne donc, on voit que le lynx est confondu avec chat et renard surtout. 
++ Starting with false negatives, in rows, we see that lynx is confused with cat and fox. 
 
-+ On continue avec les faux positifs, les colonnes donc, et on voit qu'on prédit qu'il y a un lynx sur les photos alors que ce sont en fait des chevreuils, ou des renards sur les photos.
++ Now to false positives, in columns, we predict lynx on pictures where we have actually deer and fox.
 
 ---
 class: center, middle
@@ -362,7 +361,7 @@ background-size: cover
 
 ???
 
-+ C'est pas très satisfaisant. Mais passée la frustration, on s'est posé la question, est-ce bien grave par rapport à la question écologique des interactions prédateur-proie?
++ This is disapointing, but past the frustration, one may ask is it really a big problem, is our answer to the ecological question of pred-prey interactions affected by these errors. 
 
 
 ---
@@ -372,7 +371,7 @@ background-color: white
 
 ???
 
-+ Pour voir si les biais sont graves, on a utilisé des modèles statistiques qui permettent d'inférer les co-occurrences entre espèces en tenant compte de la difficulté de les détecter sur le terrain - les modèles dits d'occupancy. 
++ To assess bias, we used statistical models that allow infering co-occurrences between species while accounting for imperfect detection - so-called occupancy models. 
 
 ---
 
@@ -386,7 +385,7 @@ load(unmarked)
 
 ???
 
-+ On peut implémenter ces modèles dans R avec le package unmarked. 
++ You can fit these models in R using the unmarked package. 
 
 ---
 background-color: white
@@ -397,7 +396,7 @@ background-color: white
 
 ???
 
-+ Voilà un cliché des données, avec une figure par espèce, en ligne les pièges photo et en colonne le temps. En rose ce sont les non-détections, et en turquoise les détections. 
++ Here is a snapshot of the data, one panel per species, with camera traps in rows, time in columns. Detections are in blue, and non-detections in pink.  
 
 ---
 ## Some `R` code
@@ -421,13 +420,13 @@ fit
 
 ???
 
-+ A partir de ces données, on construit des modèles pour tester nos hypothèses sur les interactions. 
++ With these data, we build models to test our hypothesis about interactions. 
 
-+ Ici je ne regarde que les interactions possibles entre le lynx et ses proies. 
++ Here I will look into interactions between lynx and its prey only.  
 
-+ On considère aussi une détection différente pour chaque espèce. 
++ We also consider species-specific detection probabilities. 
 
-+ Et on ajuste ce modèle par max de vrais. 
++ And we fit our model to the data using max lik.  
 
 
 ---
@@ -440,17 +439,17 @@ background-color: white
 
 ???
 
-+ On obtient les probabilités de présence du lynx, conditionnellement à la présence ou absence de ses proies. 
++ We get occupancy prob for lynx, given presence/absence of its prey. 
 
-+ En rouge, c'est l'analyse sur les photos étiquetées à la main, sans faux positifs ni faux négatifs donc. 
++ In red, the estimates are from the model fitted to the pix that were manually tagged, in other words wo/ false neg or false pos. Ground truth.  
 
-+ En gris-bleu, le même modèle ajusté aux photos étiquetées par notre réseau de neurones convolutif. 
++ In blue-gray, same model, fitted to the pix that were automatically tagged by our trained model w/ CNN. 
 
-+ Il y a un petit biais dans l'estimation de la probabilité de présence du lynx sachant la présence de ses deux proies favorites quand on se fie à l'étiquetage automatique des photos. 
++ There is a small bias in the occupancy prob of lynx given the presence of both its prey when we rely on automatic tagging. 
 
-+ Etant donné que les différences ne sont pas énormes, l'écologue pourra décider de les ignorer au regard du temps gagné par rapport à un étiquetage à la main.
++ The difference in estimates is small, and we may well decide to ignore this bias and save a lot of time by not tagging pix manually.
 
-+ Maintenant on a un plus gros problème avec la prob de présence du lynx sachant la présence du chevreuil et l'absence du chamois qui elle est clairement sous-estimée.
++ Now we have a bigger issue w/ the occupancy prob for lynx given roe deer presence and chamois absence, which is clearly under-estimated.
 
 ---
 class: left, top
@@ -461,35 +460,35 @@ background-size: cover
 
 ???
 
-+ En conclusion,
++ To conclude,
 
 --
 + Generalisation to another site is challenging.
 
 ???
 
-+ On a vu que l'utilisation d'un modèle entrainé sur un site pour prédire sur un autre site est délicate. 
++ Training a model on one site, and predict on another site is difficult. Known result (see work by S. Beery). 
 
 --
 + Lack of diversity in training dataset? More pix to come.
 
 ???
 
-+ Le problème est sûrement lié au manque de diversité dans le jeu de données d'entrainement. On va ajouter plus de photos. 
++ Our problem is most likely due to a lack of diversity in the training dataset. We're in the process of adding more pix, more diverse, and redo the training.  
 
 --
 + Do not lose sight of the ecological question.
 
 ???
 
-+ Il est facile de se perdre dans les dédales du deep learning, mais il faut garder le cap de la question écologique, et on peut peut-être accepter des performances moyennes des algorithmes si on peut vivre avec le biais engendré sur les indicateurs écologiques. 
++ Easy to get lost in deep learning, and lose sight of the ecological question. If I can live with small bias on ecological indicators, better to stay on course, and go with not-too-perfect performances of the algo and save precious time in tagging. 
 
 --
 + Ongoing work: Accounting for both false negatives and false positives. 
 
 ???
 
-+ Malgré tout, on peut sûrement faire mieux, et j'explore actuellement le développement de modèles de distribution d'espèce qui prendrait à la fois en compte les interactions et les faux positifs et faux négatifs. 
++ This being said, we can do better. I'm working on models with `\(&gt;2\)` species interactions, accounting for false positives and false negatives. 
 
 ---
 background-color: white
@@ -499,7 +498,7 @@ background-color: white
 
 ???
 
-Si vous voulez allez plus loin avec le deep learning et l'analyse d'image, n'hésitez pas à jeter un coup au regard que nous avons proposé à la SFEE avec Vincent Miele et Stéphane Dray. 
+Further reading. 
 
 
 ---
@@ -514,7 +513,7 @@ Thank you!
 
 ???
 
-Merci pour votre écoute. 
+Thank you for listening. 
 
 
 ---
@@ -590,10 +589,6 @@ background-color: white
 
 &lt;img src="img/perf.png" height="600px" width="400px" /&gt;
 
-???
-
-Pour les 3 espèces d'intérêt. 
-
 
 
 
@@ -604,15 +599,6 @@ background-color: white
 
 &lt;img src="img/marginal_occ.png" width="85%" /&gt;
 
-???
-
-+ On obtient les probabilités de présence de chaque espèce, lynx, chevreuil et chamois. 
-
-+ En rouge, c'est l'analyse sur les photos étiquetées à la main, sans faux positifs ou négatifs donc. 
-
-+ En gris-bleu, le même modèle ajusté aux photos étiquetées par notre réseau de neurones convolutif. 
-
-+ Il y a clairement des biais dans l'estimation des probabilités de présence quand on se fie à l'étiquetage automatique des photos, mais étant donné que les différences ne sont pas énormes, l'écologue pourrait décider de les ignorer au regard du temps gagné par rapport à un étiquetage à la main.
 
 
 ---

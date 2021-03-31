@@ -36,9 +36,9 @@ style_duo(primary_color = "#1F4257", secondary_color = "#F97B64")
 
 ???
 
-+ Hi My name is Olivier Gimenez. I'm a CNRS scientist at the Centre for Functional and Evolutionary Ecology in Montpellier (France). 
++ Bonjour. Mon nom est Olivier Gimenez. Je suis chercheur CNRS au Centre d'Ecologie Fonctionnelle et Evolutive à Montpellier. 
 
-+ I'm gonna tell you about my first steps in deep learning (DL) with R, and the study of species interactions w/ camera traps. 
++ Je vais vous parler de mes premiers pas dans le deep learning avec le logiciel R, et l'étude des interactions entre espèces à partir de pièges photos. 
 
 
 ---
@@ -54,9 +54,9 @@ background-size: cover
 
 ???
 
-+ I work on pred-prey relationships, interactions between species that drive large mammals communities. 
++ Je travaille sur les relations prédateur-proies, des interactions entre espèces qui façonnent les communautés de grands mammifères. 
 
-+ We aim at understanding how the environment, pred and prey interact with each other. 
++ La question que l'on se pose est de comprendre comment l'environnement et les relations entre prédateurs et proies s'articulent. 
 
 
 ---
@@ -74,9 +74,9 @@ background-size: cover
 
 ???
 
-+ This is joint work w/ Anna Chaine and Maëlis Kervellec, Vincent Miele, colleagues from the French Office for Biodiversity and game federations from Ain and Jura counties.  
++ Il s'agit d'un travail en collaboration avec Anna Chaine et Maëlis Kervellec, Vincent Miele, les collègues de l'Office Français de la Biodiversité et des fédérations de chasse de l'Ain et du Jura.  
 
-+ In passing, I would also like to thank colleagues from the Montpellier Bioinformatics Biodiversity platform who've been very helpful in using GPU machines.
++ J'en profite pour remercier les collègues de la plateforme Montpellier Bioinformatique Biodiversité qui ont été d'une aide précieuse dans l'utilisation des machines GPU.
 
 ---
 class: left, top
@@ -85,9 +85,9 @@ background-size: cover
 
 ???
 
-+ Colleagues from OFB and game federations collect data on species of interest, with camera traps set up at strategic places. 
++ Les collègues de l'OFB et des fédérations de chasse collectent des données dans l'habitat naturel des espèces qui nous intéressent, grâce à des pièges photos laissés à des endroits stratégiques. 
 
-+ On both sides of forest paths where species tend to pass, like on the pix a lynx w/ her kittens.  
++ Précisément de chaque côté de chemins où les prédateurs sont susceptibles de passer, comme ici une femelle et ses petits.  
 
 --
 
@@ -95,7 +95,7 @@ background-size: cover
 
 ???
 
-+ This method is non-invasive, in other words we do not need to physically capture the individuals.
++ Cette méthode est non-invasive, autrement dit on n'a pas besoin de capturer physiquement les animaux.
 
 --
 
@@ -103,7 +103,7 @@ background-size: cover
 
 ???
 
-+ The thing is that we get tons of pictures that we have to tag with a species label. 
++ Le souci est qu'on se retrouve avec des tonnes de photos auxquelles il faut associer une étiquette espèce. 
 
 --
 
@@ -111,7 +111,7 @@ background-size: cover
 
 ???
 
-+ Here it comes deep learning.
++ C'est là qu'entre en jeu le deep learning.
 
 ---
 class: center, middle
@@ -124,7 +124,7 @@ Source: [Andrew Ng](https://en.wikipedia.org/wiki/Andrew_Ng)]
 
 ???
 
-+ The idea is to feed algo with pix as inputs, and get the species ID as outputs. 
++ L'idée est de nourrir les algorithmes avec des photos en entrée pour en sortie récupérer l'espèce qui se trouve sur la photo. 
 
 
 ---
@@ -140,9 +140,9 @@ background-size: contain
 
 ???
 
-+ For my first steps in deep-learning, I used imaginecology a website we develop w/ our French group in Statistical Ecology. 
++ Pour faire mes premiers pas en deep-learning, j'ai utilisé imaginecology que l'on propose avec le GDR Ecologie Statistique. 
 
-+ Check it out, there is an intro to deep learning in video the one and only Vincent Miele, and several tutorials. 
++ C'est un site bourré de ressources, avec une intro au deep-learning en vidéo par exemple, ou encore tout un tas de tutoriels pour vous former. 
 
 ---
 class: right, top
@@ -154,7 +154,7 @@ background-size: cover
 
 ???
 
-+ Going back to the lynx. 
++ Revenons-en au lynx. 
 
 --
 
@@ -162,7 +162,7 @@ I used the [Python/PyTorch fastai deep learning library](https://github.com/fast
 
 ???
 
-+ For my analyses, I used the fast-ai library which relies on Python and its library Pytorch. 
++ Pour mes analyses, j'ai utilisé la librairie fast-ai qui repose sur le langage Python et sa librairie Pytorch. 
 
 --
 
@@ -174,7 +174,7 @@ knitr::include_graphics("img/fastai.png")
 
 ???
 
-+ The advantage of this library is that it comes with a R package that provides a bunch of functions to use it. 
++ Un avantage de cette librairie est qu'elle vient avec un package R qui propose tout un tas de fonctions pour l'utiliser. 
 
 ---
 class: inverse, right, top
@@ -186,7 +186,7 @@ background-size: cover
 
 ???
 
-What are the results I got?
+Quels sont les résultats que j'ai obtenus?
 
 ---
 class: inverse, center, middle
@@ -195,7 +195,7 @@ class: inverse, center, middle
 
 ???
 
-First, I did some transfer learning on a study site in the Jura county where we had a ton of pictures manually tagged. 
+Dans un premier temps, j'ai fait du transfer learning sur un site d'étude dans le Jura où on avait tout un tas de photos déjà étiquetées. 
 
 ---
 ## Some `R` code
@@ -207,9 +207,9 @@ library(fastai)
 
 ???
 
-+ To do so, you only need a few lines of R code. 
++ Pour ce faire, il suffit de quelques lignes de code R. 
 
-+ Load the fast-ai library first.  
++ On charge le package fast-ai d'abord. 
 
 ---
 ## Some `R` code
@@ -230,7 +230,7 @@ dls <- ImageDataLoaders_from_folder(
 
 ???
 
-+ Then load the pictures that we split into a training and validation datasets, and apply all sorts of treatments to these pictures.  
++ Puis on charge les photos qu'on a séparées au préalable en un jeu de données d'entrainement et un jeu de données de validation, et on leur applique tout un tas de traitements. 
 
 ---
 ## Some `R` code
@@ -244,7 +244,7 @@ learn <- cnn_learner(dls = dls,
 
 ???
 
-+ Get the pre-trained model architecture, here a resnet50.
++ On récupère un modèle déjà pré-entrainé, ici un resnet50. 
 
 ---
 ## Some `R` code
@@ -260,9 +260,9 @@ one_cycle
 
 ???
 
-+ Then continue training the model with our data. 
++ Puis on fait l'entrainement sur nos données. 
 
-+ I used 20 epochs and saved the model after each epoch for later use. 
++ Ici j'ai utilisé 20 epochs et sauvegardé le modèle après chaque epoch pour une utilisation ultérieure. 
 
 ---
 class: center, middle
@@ -272,7 +272,7 @@ background-size: contain
 
 ???
 
-+ The results are rather good. We manage to classify the lynx and its main prey, chamois and roe deer, with a satisfying level of certainty.
++ Les résultats sont plutôt bons. On arrive à classifier le lynx, et ses proies, le chamoix et le chevreuil, avec un degré de certitude satisfaisant.
 
 ---
 class: inverse, center, middle
@@ -282,7 +282,8 @@ class: inverse, center, middle
 
 ???
 
-+ Then, I used my freshly trained model to tag automatically a bunch of pictures we had on another study site, in the Ain county. These pictures were also manually tagged, hence we knew the species for sure. 
++ Ensuite, j'ai voulu utilisé mon modèle pour étiqueter automatiquement des photos prises avec des pièges installés sur un autre site, dans l'Ain. Ces photos ont aussi été étiquetées à la main. On connait donc la vérité.
+
 
 ---
 ## Some `R` code
@@ -295,7 +296,7 @@ learn %>%
 
 ???
 
-+ In R, we use the predict function to tag a new pix with the model we've trained in previous steps.
++ Dans R, c'est avec la fonction predict qu'on étiquette une nouvelle photo grâce au modèle entrainé aux étapes précédentes. 
 
 ---
 class: middle, center
@@ -316,15 +317,15 @@ perf_prediction
 
 ???
 
-+ The results are best displayed with a confusion matrix, with species that are predicted by the algo in columns, and the species that are actually in the pictures in rows. 
++ Les résultats peuvent être représentés sous la forme d'une matrice de confusion, avec les espèces qui sont prédites par l'algorithme en colonnes, et les espèces qui se trouvent effectivement sur les photos en lignes.  
 
-+ Let us focus on lynx.  
++ On se concentre sur le lynx et on dissèque les faux positifs et faux négatifs.  
 
-+ A false negative is for example a picture with a lynx but we predict another species on it. A false positive is a picture without any lynx but we predict that there is a lynx on it. 
++ Un faux négatif est par exemple une photo sur laquelle on a un lynx mais on prédit une autre espèce. Un faux positif est une photo sur laquelle on n'a pas de lynx mais on prédit qu'il y en a un. 
 
-+ Starting with false negatives, in rows, we see that lynx is confused with cat and fox. 
++ On commence avec les faux négatifs, en ligne donc, on voit que le lynx est confondu avec chat et renard surtout. 
 
-+ Now to false positives, in columns, we predict lynx on pictures where we have actually deer and fox.
++ On continue avec les faux positifs, les colonnes donc, et on voit qu'on prédit qu'il y a un lynx sur les photos alors que ce sont en fait des chevreuils, ou des renards sur les photos.
 
 ---
 class: center, middle
@@ -333,7 +334,7 @@ background-size: cover
 
 ???
 
-+ This is disapointing, but past the frustration, one may ask is it really a big problem, is our answer to the ecological question of pred-prey interactions affected by these errors. 
++ C'est pas très satisfaisant. Mais passée la frustration, on s'est posé la question, est-ce bien grave par rapport à la question écologique des interactions prédateur-proie?
 
 
 ---
@@ -345,7 +346,7 @@ knitr::include_graphics("img/rota_cover.png")
 
 ???
 
-+ To assess bias, we used statistical models that allow infering co-occurrences between species while accounting for imperfect detection - so-called occupancy models. 
++ Pour voir si les biais sont graves, on a utilisé des modèles statistiques qui permettent d'inférer les co-occurrences entre espèces en tenant compte de la difficulté de les détecter sur le terrain - les modèles dits d'occupancy. 
 
 ---
 
@@ -358,7 +359,7 @@ load(unmarked)
 
 ???
 
-+ You can fit these models in R using the unmarked package. 
++ On peut implémenter ces modèles dans R avec le package unmarked. 
 
 ---
 background-color: white
@@ -371,7 +372,7 @@ knitr::include_graphics("img/species_data.png")
 
 ???
 
-+ Here is a snapshot of the data, one panel per species, with camera traps in rows, time in columns. Detections are in blue, and non-detections in pink.  
++ Voilà un cliché des données, avec une figure par espèce, en ligne les pièges photo et en colonne le temps. En rose ce sont les non-détections, et en turquoise les détections. 
 
 ---
 ## Some `R` code
@@ -394,13 +395,13 @@ fit
 
 ???
 
-+ With these data, we build models to test our hypothesis about interactions. 
++ A partir de ces données, on construit des modèles pour tester nos hypothèses sur les interactions. 
 
-+ Here I will look into interactions between lynx and its prey only.  
++ Ici je ne regarde que les interactions possibles entre le lynx et ses proies. 
 
-+ We also consider species-specific detection probabilities. 
++ On considère aussi une détection différente pour chaque espèce. 
 
-+ And we fit our model to the data using max lik.  
++ Et on ajuste ce modèle par max de vrais. 
 
 
 ---
@@ -415,17 +416,17 @@ knitr::include_graphics("img/conditional_occ.png")
 
 ???
 
-+ We get occupancy prob for lynx, given presence/absence of its prey. 
++ On obtient les probabilités de présence du lynx, conditionnellement à la présence ou absence de ses proies. 
 
-+ In red, the estimates are from the model fitted to the pix that were manually tagged, in other words wo/ false neg or false pos. Ground truth.  
++ En rouge, c'est l'analyse sur les photos étiquetées à la main, sans faux positifs ni faux négatifs donc. 
 
-+ In blue-gray, same model, fitted to the pix that were automatically tagged by our trained model w/ CNN. 
++ En gris-bleu, le même modèle ajusté aux photos étiquetées par notre réseau de neurones convolutif. 
 
-+ There is a small bias in the occupancy prob of lynx given the presence of both its prey when we rely on automatic tagging. 
++ Il y a un petit biais dans l'estimation de la probabilité de présence du lynx sachant la présence de ses deux proies favorites quand on se fie à l'étiquetage automatique des photos. 
 
-+ The difference in estimates is small, and we may well decide to ignore this bias and save a lot of time by not tagging pix manually.
++ Etant donné que les différences ne sont pas énormes, l'écologue pourra décider de les ignorer au regard du temps gagné par rapport à un étiquetage à la main.
 
-+ Now we have a bigger issue w/ the occupancy prob for lynx given roe deer presence and chamois absence, which is clearly under-estimated.
++ Maintenant on a un plus gros problème avec la prob de présence du lynx sachant la présence du chevreuil et l'absence du chamois qui elle est clairement sous-estimée.
 
 ---
 class: left, top
@@ -436,35 +437,35 @@ background-size: cover
 
 ???
 
-+ To conclude,
++ En conclusion,
 
 --
 + Generalisation to another site is challenging.
 
 ???
 
-+ Training a model on one site, and predict on another site is difficult. Known result (see work by S. Beery). 
++ On a vu que l'utilisation d'un modèle entrainé sur un site pour prédire sur un autre site est délicate. 
 
 --
 + Lack of diversity in training dataset? More pix to come.
 
 ???
 
-+ Our problem is most likely due to a lack of diversity in the training dataset. We're in the process of adding more pix, more diverse, and redo the training.  
++ Le problème est sûrement lié au manque de diversité dans le jeu de données d'entrainement. On va ajouter plus de photos. 
 
 --
 + Do not lose sight of the ecological question.
 
 ???
 
-+ Easy to get lost in deep learning, and lose sight of the ecological question. If I can live with small bias on ecological indicators, better to stay on course, and go with not-too-perfect performances of the algo and save precious time in tagging. 
++ Il est facile de se perdre dans les dédales du deep learning, mais il faut garder le cap de la question écologique, et on peut peut-être accepter des performances moyennes des algorithmes si on peut vivre avec le biais engendré sur les indicateurs écologiques. 
 
 --
 + Ongoing work: Accounting for both false negatives and false positives. 
 
 ???
 
-+ This being said, we can do better. I'm working on models with $>2$ species interactions, accounting for false positives and false negatives. 
++ Malgré tout, on peut sûrement faire mieux, et j'explore actuellement le développement de modèles de distribution d'espèce qui prendrait à la fois en compte les interactions et les faux positifs et faux négatifs. 
 
 ---
 background-color: white
@@ -476,7 +477,7 @@ knitr::include_graphics("img/sfee.png")
 
 ???
 
-Further reading. 
+Si vous voulez allez plus loin avec le deep learning et l'analyse d'image, n'hésitez pas à jeter un coup au regard que nous avons proposé à la SFEE avec Vincent Miele et Stéphane Dray. 
 
 
 ---
@@ -491,7 +492,7 @@ Thank you!
 
 ???
 
-Thank you for listening. 
+Merci pour votre écoute. 
 
 
 ---
@@ -605,6 +606,10 @@ readr::read_csv2(here::here("dat","perf_fastai.csv")) %>%
 
 <img src="img/perf.png" height="600px" width="400px" />
 
+???
+
+Pour les 3 espèces d'intérêt. 
+
 
 
 
@@ -617,6 +622,15 @@ background-color: white
 knitr::include_graphics("img/marginal_occ.png")
 ```
 
+???
+
++ On obtient les probabilités de présence de chaque espèce, lynx, chevreuil et chamois. 
+
++ En rouge, c'est l'analyse sur les photos étiquetées à la main, sans faux positifs ou négatifs donc. 
+
++ En gris-bleu, le même modèle ajusté aux photos étiquetées par notre réseau de neurones convolutif. 
+
++ Il y a clairement des biais dans l'estimation des probabilités de présence quand on se fie à l'étiquetage automatique des photos, mais étant donné que les différences ne sont pas énormes, l'écologue pourrait décider de les ignorer au regard du temps gagné par rapport à un étiquetage à la main.
 
 
 ---
